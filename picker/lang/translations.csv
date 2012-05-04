@@ -1,0 +1,225 @@
+msg,translated,pt,en
+ADDRESS,y,Endereço:,Address:
+BUTTON_BULK_UPLOAD,y,Bulk Upload,Bulk Upload
+BUTTON_HTML,y,Ajuda,help
+BUTTON_MAP_LOC,y,Mapeie um local,Map
+BUTTON_SEARCH,y,Pesquisa de Vídeos e Fotos,Search
+BUTTON_UPLOAD,y,Upload e Webcam,Upload & webcam
+BUTTON_YOUR_MEDIA,y,"Suas fotos, vídeos e álbuns","Your photos, videos & albums"
+FIND_LOCATION,y,Mapeie um local,Map a location
+GADGET_EMBED_CODE,y,Código para incorporar  vídeo do Picasa:,Picasa video embed code:
+IMG_EMBED_CODE,y,Código para incorporar imagem:,Image embed code:
+IMG_LINK,y,Link direto para imagem:,Direct link to image:
+INSTRUCTIONS_FOOTER,y,Clique em um dos botões acima para iniciar o processo!,Click on any of the big buttons above to start the process!
+INSTRUCTIONS_LIST_HEADER,y,"Bem-vindo ao Dispositivo ""Map & Media Picker"". Esta ferramenta pode ser utilizada para obter links e códigos para imbutir de:",Welcome to the Map & Media Picker Gadget. You can use this tool to get links and embed code for:
+INSTRUCTIONS_MAPS,y,Locais no Mapa,Map locations
+INSTRUCTIONS_SEARCH,y,Fotos e vídeos encontrados na web,Photos and videos found on the web
+INSTRUCTIONS_TITLE,y,Instructions,Instructions
+INSTRUCTIONS_UPLOAD,y,Fotos de uploads e gravações de webcams,Uploaded photos and webcam recordings
+INSTRUCTIONS_YOUR_MEDIA,y,"Fotos, vídeos e slideshows do Picasa","Picasa photos, videos and slideshows"
+INSTRUCTIONS_YT,y,Vídeos do YouTube,YouTube videos
+ITEM_LIMITED_ALBUM,y,"Este item pertence a um álbum de acesso ""Restrito"" do Picasa.","This item is from an ""Limited"" access Picasa album."
+LAT_LON,y,Latitude e Longitude:,Latitude & Longitude:
+LEARN_MORE,y,Mais informações,Learn more
+LIMITED_WARNING,y,"<h3>Aviso: Álbuns de Acesso Limitado</h3>
+<p>Ao selecionar uma foto, vídeo ou slideshow de um álbum do Picasa cujo compartilhamento seja “Restrito para pessoas que possuam um link"", você fornece um “código de autorização” para o acesso a esse conteúdo. Isso é necessário para inserir itens de um álbum “Restrito”. Isto inclui o seu álbum <a target=""_blank"" href="" 
+http://support.google.com/picasa/bin/answer.py?answer=73970"">DropBox</a> do Picasa.</p>
+<p>Note que esse código de autorização pode ser descoberto e utilizado por outras pessoas para visualizar todas as fotos/vídeos contidos no álbum com compartilhamento “Restrito para pessoas que possuam um link”.</p>
+<p>Todas as fotos e vídeos carregados através desta ferramenta, incluindo as gravações com webcam feitas aqui, serão inseridas do seu DropBox do Picasa, que é um álbum de acesso “Restrito para pessoas que possuam um link”.</p>
+<p>Caso você não deseje permitir o acesso acidental de outras pessoas a determinadas fotos e vídeos do seu DropBox ou outros álbuns “Restritos para pessoas que possuam um link”, você deverá mover ou copiar os itens que você pretende inserir para um álbum “Público na web”.</p>
+<p>Esta ferramenta avisará quando você selecionar um item de um álbum “Restrito” e lembrará você sobre este assunto.</p>
+Encontre mais informações sobre o compartilhamento de álbuns do Picasa nos seguintes locais:
+<ul><li><a target=""_blank"" href=""http://support.google.com/picasa/
+bin/answer.py?answer=39551"">Opções de compartilhamento do Picasa</a>
+    <li><a target=""_blank"" href=""http://support.google.com/picasa/
+bin/answer.py?answer=39551"">Opções de compartilhamento do Picasa para usuários de aplicações do Google</a>
+<li><a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=48446"">Sobre “códigos de autorização” e como alterá-los</a>
+</ul></p>","<h3>Warning: Limited Access Albums</h3>
+<p>When you select a photo, video or slideshow from a Picasa album that has 
+""Limited, anyone with a link"" sharing you provide an ""authorization 
+key"" to access that content. This is required to embed items from a  
+""Limited"" album. This includes your <a target=""_blank"" href="" 
+http://support.google.com/picasa/bin/answer.py?answer=73970""> 
+Picasa DropBox</a> album.</p>      
+<p>Please note that this authorization key could be 
+retrieved and used by someone to view any and all the photos/videos in 
+that album with ""Limited, anyone with a link"" sharing.</p>
+<p>Any photos & videos you upload using this tool, including any 
+webcam recordings made here will be put into your Picasa DropBox, 
+which is an ""Limited, anyone with a link"" access album.</p>
+<p>If you don't want to accidently give someone access to the other 
+photos and videos in your DropBox or other ""Limited, anyone with a link"" 
+ albums, you should move or copy the items you want to embed to 
+a different album which is ""Public on the web"".</p>' 
+<p><strong>This tool will warn you if you choose an item from a ""Limited"" 
+album and remind you about this issue.</strong></p>
+<p>Find more information about Picasa album sharing here:
+<ul><li><a target=""_blank"" href=""http://support.google.com/picasa/
+bin/answer.py?answer=39551"">Sharing options for Picasa</a>
+    <li><a target=""_blank"" href=""http://support.google.com/picasa/
+bin/answer.py?answer=39551"">Picasa sharing options for Google Apps users</a>
+<li><a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=48446"">About authkeys and how to reset them.</a>
+</ul></p>"
+LINK_ALBUM_PWA,y,Link para álbum do Picasa:,Link to album on Picasa:
+LINK_GMAPS,y,Link para o local no Google Maps:,Link to location on Google Maps:
+LINK_IMG,y,Link para foto do website:,Link to photo on website:
+LINK_PHOTO_PWA,y,Link para foto do Picasa:,Link to photo on Picasa:
+LINK_PICASA_VIDEO,y,Link para vídeo do Picasa:,Link to video on Picasa:
+LINK_YT,y,Link para vídeo do YouTube:,Link to video on YouTube:
+LOC_LAT_LON,y,Latitude e Longitude do Local,Latitude & longitude
+LOCATION_NAME,y,Nome do Local:,Location Name:
+PICKER_LANG,y,pt,en
+PWA_SLIDESHOW_CODE,y,Código para incorporar slideshow:,Slideshow embed code:
+TAB_LIMITED_WARNING,y,Informações sobre álbuns restritos,About limited albums
+TAB_USAGE,y,Como utilizar esta ferramenta,How to use this tool
+YT_EMDED_CODE,y,Código para incorporar vídeo do YouTube:,YouTube embed code:
+AUDIO_ONLY,n,audio-only,audio-only
+BUTTON_YOUR_ICONS,n,Icons,Icons
+CHOOSE_ALBUM_TO_BULK_UPLOAD,n,Bulk Upload: Upload one or more photos & videos,Bulk Upload: Upload one or more photos & videos
+CHOOSE_ALBUM_TO_UPLOAD,n,Upload: Step 1 - Choose a Picasa Album,Upload: Step 1 - Choose a Picasa Album
+CHOOSE_MEDIA_TO_UPLOAD,n,Upload: Step 2 - Select a photo or video to upload,Upload: Step 2 - Select a photo or video to upload
+CHOOSE_YOUR_MEDIA,n,"Your photos, videos and album slideshows","Your photos, videos and album slideshows"
+COPY_INSTRUCTIONS_ALBUM,n,"Instructions: 1) Select a suitable size for your Picasa Album Slideshow. 2) Decide if you want a ""direct link"" to the album or an HTML snippet to embed the slideshow. 3) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper.","Instructions: 1) Select a suitable size for your Picasa Album Slideshow. 2) Decide if you want a ""direct link"" to the album or an HTML snippet to embed the slideshow. 3) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper."
+COPY_INSTRUCTIONS_IMG_SEARCH,n,"Instructions: 1) Select a suitable size for the image you found by searching. 2) Decide if you want a ""direct link"" to the image, an HTML snippet to embed or just the URL to this image on the internet. 3) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper.","Instructions: 1) Select a suitable size for the image you found by searching. 2) Decide if you want a ""direct link"" to the image, an HTML snippet to embed or just the URL to this image on the internet. 3) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper."
+COPY_INSTRUCTIONS_MAPS,n,"Instructions: 1) Decide if you want a ""direct link"" to this location on Google Maps, or the latitude and longitude for use in Spreadsheet Mapper. 2) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper.","Instructions: 1) Decide if you want a ""direct link"" to this location on Google Maps, or the latitude and longitude for use in Spreadsheet Mapper. 2) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper."
+COPY_INSTRUCTIONS_PHOTO_FROM_ALBUM,n,"Instructions: 1) Select a suitable size for your photo. 2) Decide if you want a ""direct link"" to the image, an HTML snippet to embed or just the URL to this image on Picasa. 3) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper.","Instructions: 1) Select a suitable size for your photo. 2) Decide if you want a ""direct link"" to the image, an HTML snippet to embed or just the URL to this image on Picasa. 3) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper."
+COPY_INSTRUCTIONS_PICASA_VIDEO,n,"Instructions: 1) Select a suitable size for your Picasa video. 2) Decide if you want a ""direct link"" to the video on Picasa or an HTML snippet to embed the video. 3) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper.","Instructions: 1) Select a suitable size for your Picasa video. 2) Decide if you want a ""direct link"" to the video on Picasa or an HTML snippet to embed the video. 3) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper."
+COPY_INSTRUCTIONS_YOUTUBE,n,"Instructions: 1) Select a suitable size for your YouTube video. 2) Decide if you want a ""direct link"" to the video on YouTube.com or an HTML snippet to embed the video. 3) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper.","Instructions: 1) Select a suitable size for your YouTube video. 2) Decide if you want a ""direct link"" to the video on YouTube.com or an HTML snippet to embed the video. 3) Click in the desired field and copy (Control-C). 4) Paste into the desired location in Spreadsheet Mapper."
+ERROR_LINK_PICASA_ALBUM,n,Link para Álbum particular do Picasa:,Link to private Picasa Album:
+ERROR_LINK_YT_VIDEO,n,Link to private YouTube video:,Link to private YouTube video:
+ERROR_PRIVATE_CONTENT,n,Private Content!,Private Content!
+ERROR_PRIVATE_PICASA_WARNING,n,"
+<p>The item you selected from Picasa is probably in a
+<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=39551"">""private"" or ""limited"" album</a>,
+which means you can't embed it on another website!</p>
+<p>You either have to make this album ""Public on the web"" or
+""Limited, anyone with a link"" (<a target=""_blank"" href=""
+http://support.google.com/picasa/bin/answer.py?answer=39551
+"">more info</a>) OR also copy the photo/video into a
+new/different album that is ""Public"" or ""Limited""
+(<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=62703"">more info</a>). Below is a link to
+your album, in case you want to change the permissions or
+copy/move your item to another album. Here are some instructions on  
+    <a target=""_blank"" href=""http://support.google.com/picasa/bin/answer.py?answer=113516"">how to change the permissions</a>.</p>
+<p>If you have a Google Apps account, it may not be possible for
+you to share your albums as ""Public"" or ""Limited, with link""
+(<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=187194"">more info</a>). In
+this case you should host your photos or videos on a regular
+Google account.<p>","
+<p>The item you selected from Picasa is probably in a
+<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=39551"">""private"" or ""limited"" album</a>,
+which means you can't embed it on another website!</p>
+<p>You either have to make this album ""Public on the web"" or
+""Limited, anyone with a link"" (<a target=""_blank"" href=""
+http://support.google.com/picasa/bin/answer.py?answer=39551
+"">more info</a>) OR also copy the photo/video into a
+new/different album that is ""Public"" or ""Limited""
+(<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=62703"">more info</a>). Below is a link to
+your album, in case you want to change the permissions or
+copy/move your item to another album. Here are some instructions on  
+    <a target=""_blank"" href=""http://support.google.com/picasa/bin/answer.py?answer=113516"">how to change the permissions</a>.</p>
+<p>If you have a Google Apps account, it may not be possible for
+you to share your albums as ""Public"" or ""Limited, with link""
+(<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=187194"">more info</a>). In
+this case you should host your photos or videos on a regular
+Google account.<p>"
+ERROR_TAB_BULK_SUCCEEDED,n,Bulk Upload Succeeded!,Bulk Upload Succeeded!
+ERROR_TAB_PRIVATE_ABLUM,n,Private Picasa Album!,Private Picasa Album!
+ERROR_TAB_YT_VIDEO,n,Private YouTube video!,Private YouTube video!
+ERROR_TITLE_PWA_ALBUM,n,Sorry! This is a private Picasa Album,Sorry! This is a private Picasa Album
+ERROR_TITLE_PWA_PHOTO,n,Sorry! This photo is in a private Picasa Album,Sorry! This photo is in a private Picasa Album
+ERROR_TITLE_PWA_UPLOAD_ALBUM,n,"Upload succeeded, but the Picasa Album is private!","Upload succeeded, but the Picasa Album is private!"
+ERROR_TITLE_PWA_VIDEO,n,Sorry! This video is in a private Picasa Album,Sorry! This video is in a private Picasa Album
+ERROR_TITLE_YT_VIDEO,n,Sorry! This YouTube video is private,Sorry! This YouTube video is private
+ERROR_UPLOAD_PRIVATE_PICASA_PRIVATE,n," <p>The album you uploaded your items to is private. Before you can embed photos or
+      videos from this album, you have to make this album ""Public on the web"" or
+      ""Limited, anyone with a link"" (<a target=""_blank"" href=""
+      http://support.google.com/picasa/bin/answer.py?answer=39551
+      "">more info</a>).</p>
+      <p>Click on the link to your album below to visit this album in Picasa
+      and change the sharing options. Here are some instructions on  
+      <a target=""_blank"" href=""http://support.google.com/picasa/bin/answer.py?answer=113516"">how to do it</a>.
+      </p>","
+      <p>The album you uploaded your items to is private. Before you can embed photos or
+      videos from this album, you have to make this album ""Public on the web"" or
+      ""Limited, anyone with a link"" (<a target=""_blank"" href=""
+      http://support.google.com/picasa/bin/answer.py?answer=39551
+      "">more info</a>).</p>
+      <p>Click on the link to your album below to visit this album in Picasa
+      and change the sharing options. Here are some instructions on  
+      <a target=""_blank"" href=""http://support.google.com/picasa/bin/answer.py?answer=113516"">how to do it</a>.
+      </p>
+    "
+ERROR_YOUTUBE_PRIVATE,n,<p>The video you selected from YouTube is private...<p>,<p>The video you selected from YouTube is private...<p>
+ICON,n,Icon,Icon
+ORIGINAL,n,Original,Original
+PICASA_ERROR_OLD,n,"
+<h2>Sorry! We can't load this photo/video/slideshow from Picasa</h2>
+<p>The item you selected from Picasa is probably in a
+<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=39551"">""private"" or ""limited"" album</a>,
+which means you can't embed it on another website!</p>
+<p>You either have to make this album ""Public on the web"" or
+""Limited, anyone with a link"" (<a target=""_blank"" href=""
+http://support.google.com/picasa/bin/answer.py?answer=39551
+"">more info</a>) OR also copy the photo/video into a
+new/different album that is ""Public"" or ""Limited""
+(<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=62703"">more info</a>). Below is a link to
+your album, in case you want to change the permissions or
+copy/move your item to another album.</p>
+<p>If you have a Google Apps account, it may not be possible for
+you to share your albums as ""Public"" or ""Limited, with link""
+(<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=187194"">more info</a>). In
+this case you should host your photos or videos on a regular
+Google account.<p>","
+<h2>Sorry! We can't load this photo/video/slideshow from Picasa</h2>
+<p>The item you selected from Picasa is probably in a
+<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=39551"">""private"" or ""limited"" album</a>,
+which means you can't embed it on another website!</p>
+<p>You either have to make this album ""Public on the web"" or
+""Limited, anyone with a link"" (<a target=""_blank"" href=""
+http://support.google.com/picasa/bin/answer.py?answer=39551
+"">more info</a>) OR also copy the photo/video into a
+new/different album that is ""Public"" or ""Limited""
+(<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=62703"">more info</a>). Below is a link to
+your album, in case you want to change the permissions or
+copy/move your item to another album.</p>
+<p>If you have a Google Apps account, it may not be possible for
+you to share your albums as ""Public"" or ""Limited, with link""
+(<a target=""_blank"" href=""http://support.google.com/picasa/bin/
+answer.py?answer=187194"">more info</a>). In
+this case you should host your photos or videos on a regular
+Google account.<p>"
+PICASA_ICON_ERROR,n,"
+<h2>Sorry! I can't make an icon out of a video!</h2>
+<p>The item you selected from Picasa is not a photo. I can only make 
+icons out of photos. Please select a photo from your Picasa Albums<p>","
+<h2>Sorry! I can't make an icon out of a video!</h2>
+<p>The item you selected from Picasa is not a photo. I can only make 
+icons out of photos. Please select a photo from your Picasa Albums<p>"
+SEARCH_PHOTOS_VIDEOS,n,Video & photo search,Video & photo search
+SUCCEED_TITLE_PWA_UPLOAD_ALBUM,n,Upload succeeded!,Upload succeeded!
+SUCCEED_UPLOAD_PICASA_PRIVATE,n,"<p>Your items have been uploaded successfully! To embed one of your items
+      click the ""Choose a map icon"" or ""Your photos, videos & albums"" button above,
+      select this album and choose a photo or video!</p>","<p>Your items have been uploaded successfully! To embed one of your items
+      click the ""Choose a map icon"" or ""Your photos, videos & albums"" button above,
+      select this album and choose a photo or video!</p>"
+SUCCESS_LINK_PICASA_ALBUM,n,Link to your Picasa Album:,Link to your Picasa Album:
+TITLE_ALBUM,n,Picasa Album:,Picasa Album:
+TITLE_MAPS,n,Map Location,Map Location
+TITLE_PHOTO_FROM_ALBUM,n,Photo from Picasa Album:,Photo from Picasa Album:
+TITLE_SEARCH,n,From Google Search,From Google Search
+TITLE_VIDEO_FROM_ALBUM,n,Video from Picasa Album:,Video from Picasa Album:
+TITLE_YOUTUBE,n,Video from YouTube,Video from YouTube
