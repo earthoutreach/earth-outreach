@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs
-      title="Media Picker"
-      description=""
+      title="Map &amp; Media Picker"
+      description="This gadget allows you to pick or upload photos and videos from your Picasa Web Albums and YouTube accounts. You can also get the latitude and longitude for locations on a map."
       author="Sean Askay"
       author_email="alchemist@google.com"
       author_location="Mountain View, CA USA"
@@ -540,7 +540,7 @@ Embed Option: Autoplay">
           title: ''
         }
         return '<' + 'script src="http://www.gmodules.com/ig/ifr?' +
-            getUrlParametersFromArray(url_params, '&amp;') + '"></' + 'script>';
+            getUrlParametersFromArray(url_params, '&amp;') + '"></' + ' ';
       }
 
 
