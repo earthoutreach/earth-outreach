@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs
+      title="DEV Embed an unlisted or public Picasa Video on your webpage."
+      description="Embed an unlisted or public Picasa Video on your webpage."
+      author="Sean Askay"
+      author_email="alchemist@google.com"
+      author_location="Mountain View, CA USA"
+      author_affiliation="Google Inc"
+      width="500"
+      height="500">
+    <Locale messages="http://unchartable.googlecode.com/svn/trunk/misc/sm/en_ALL.xml?foo=bar"/>
+    <Locale lang="pt" messages="http://unchartable.googlecode.com/svn/trunk/misc/sm/pt_ALL.xml?foo=bar"/>
+
+    <Require feature="dynamic-height"/>
+    <Require feature="flash"/>
+    <Require feature="minimessage"/>
+    <Require feature="setprefs"/>
+  </ModulePrefs>
+
+  <UserPref name="map"  default_value="1" required="true" datatype="enum" display_name="Enable Map">
+    <EnumValue value="1" display_value="True"/>
+    <EnumValue value="0" display_value="False"/>
+  </UserPref>
+
+  <UserPref name="your_media"  default_value="1" required="true" datatype="enum" display_name="Enable
+Your media">
+    <EnumValue value="1" display_value="True"/>
+    <EnumValue value="0" display_value="False"/>
+  </UserPref>
+
+  <UserPref name="upload"  default_value="1" required="true" datatype="enum" display_name="Enable
+Upload">
+    <EnumValue value="1" display_value="True"/>
+    <EnumValue value="0" display_value="False"/>
+  </UserPref>
+
+  <UserPref name="bulk_upload"  default_value="1" required="true" datatype="enum" display_name="Enable
+Bulk Upload">
+    <EnumValue value="1" display_value="True"/>
+    <EnumValue value="0" display_value="False"/>
+  </UserPref>
+
+
+  <UserPref name="search"  default_value="1" required="true" datatype="enum" display_name="Enable
+Search">
+    <EnumValue value="1" display_value="True"/>
+    <EnumValue value="0" display_value="False"/>
+  </UserPref>
+
+  <UserPref name="autohide"  default_value="0" required="true" datatype="enum" display_name="Video
+Embed Option: Autohide Controls">
+    <EnumValue value="1" display_value="True"/>
+    <EnumValue value="0" display_value="False"/>
+  </UserPref>
+
+  <UserPref name="autoplay"  default_value="0" required="true" datatype="enum" display_name="Video
+Embed Option: Autoplay">
+    <EnumValue value="1" display_value="True"/>
+    <EnumValue value="0" display_value="False"/>
+  </UserPref>
+
+  <Content type="html"><![CDATA[
+    <link rel="stylesheet" href=
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/start/jquery-ui.css" />
+
+    <style>
+
+    #results {
+      font-size: 80%;
+      margin-left: 10px;
+    }
+
+    button.ui-button {
+      margin: 10px;
+      font-size: 80%;
+      font-weight: bold;
+    }
+
+    .media_tab div {
+      margin-top: 15px;
+    }
+
+    .media_tab label {
+      font-weight: bold;
+    }
+
+    #media_picker {
+      width: 100%;
+      height: 100%;
+    }
+
+    #picker_launcher {
+      margin: 10px;
+      text-align: center;
+    }
+
+    .failure_msg {
+      width: 700px;
+    }
+
+    .failure_msg p.failure_link label {
+      font-weight: bold;
+    }
+
+    .limited_header {
+      padding-left: 20px;
+      font-size: 100%;
+      color: red;
+    }
+
+    .ui-tabs .ui-tabs-nav li a {
+      padding: 4px 12px;
+    }
+
+    .error_link_header {
+      padding-top: 20px;
+    }
+
+    </style>
+    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+
+    PREFS = new _IG_Prefs();
+    MSG = new gadgets.MiniMessage(__MODULE_ID__);
+
+    LANG = PREFS.getMsg('PICKER_LANG');
+
+    google.load('picker', '1', {'language': LANG});
+    google.load('jquery', '1.6.4');
+    google.load('jqueryui', '1.8.16');
+    google.load('feeds', '1');
+    //google.setOnLoadCallback(init);
+
+    gadgets.util.registerOnLoadHandler(function () {
+      init();
+    });
+
+
+    //Global vars
+
+    CURRENT_PICKER = null;
+    CURRENT_PICKER_TYPE = '';
+
+    MEDIA_PICKER_DIV_ID = 'media_picker';
+    PICKER_LAUNCHER_DIV_ID = 'picker_launcher';
+
+    RESULTS_DIV_ID = 'results';
+    RESULTS_TABS_ID = 'results_tabs';
+
+    PWA_DOMAIN = 'https://picasaweb.google.com/';
+    //PWA_VID_GADGET_URL =
+'http://hosting.gmodules.com/ig/gadgets/file/112339596650419432585/picasa_video.xml'
+    PWA_VID_GADGET_URL = 'http://unchartable.googlecode.com/svn/trunk/misc/sm/picasa_video_embedder.xml'
+
+    LINK_IMG_SRC = 'https://unchartable.googlecode.com/svn/trunk/misc/sm/open.gif';
+
+    YT_CONTROLS_HEIGHT = 35;
+    YT_AUDIO_ONLY_HEIGHT = 0;
+
+    WIDE_VIDEO_RES = [
+        {width: 240, height: 135}, {width: 320, height: 180},
+        {width: 480, height: 270}, {width: 560, height: 315},
+        {width: 853, height: 480}, {width: 1280, height: 720},
+        {width: 1920, height: 1080},
+        {width: 300, height: YT_AUDIO_ONLY_HEIGHT} //audio only
+    ];
+
+    REG_VIDEO_RES = [
+        {width: 240, height: 180}, {width: 320, height: 240},
+        {width: 480, height: 360}, {width: 640, height: 480},
+        {width: 300, height: YT_AUDIO_ONLY_HEIGHT} //audio only
+    ];
+
+
+    //TODO: Remove comment
+    //PWA slideshow sizes: 0,72,144,160,200,288,320,400,512,576,640,720,800
+    SLIDESHOW_RES = [
+        {width: 200, height: 150}, {width: 288, height: 216},
+        {width: 320, height: 240}, {width: 400, height: 300},
+        {width: 512, height: 384}, {width: 576, height: 432},
+        {width: 640, height: 480}
+    ];
+
+    ICON_IMG_WIDTHS = [32, 64, 128];
+    PHOTO_WIDTHS = [100, 150, 200, 250, 300, 350, 400, 450, 500, 0, 32, 64, 128];
+
+    AUTOPLAY = PREFS.getInt('autoplay');
+    AUTOHIDE = PREFS.getInt('autohide');
+
+    //Flashvars for youtube and picasa slideshow players
+    YT_DEFAULT_FLASH_VARS = function (){
+        this.allowfullscreen = 'true';
+        this.allowscriptaccess = 'always';
+        this.modestbranding = '1';
+        this.showinfo = '0';
+        this.rel = '0';
+        this.wmode = 'opaque';
+    };
+
+
+    PWA_PLAYER = 'https://www.youtube.com/get_player?enablejsapi=1';
+
+    PWA_VIDEO_DEFAULT_FLASH_VARS = function (){
+        this.allowfullscreen = 'true';
+        this.allowscriptaccess = 'always';
+        this.modestbranding = '1';
+        this.showinfo = '0';
+        this.rel = '0';
+        this.wmode = 'opaque';
+    };
+
+    PWA_SLIDESHOW_PLAYER = 'https://picasaweb.google.com/s/c/bin/slideshow.swf';
+
+    SLIDESHOW_DEFAULT_FLASH_VARS = function (){
+        this.allowfullscreen = 'true';
+        this.allowscriptaccess = 'always';
+        this.pluginspage = 'http://www.macromedia.com/go/getflashplayer';
+    };
+
+
+    PWA_ERROR_MAPPING = {
+      album: 'ERROR_TITLE_PWA_ALBUM',
+      photo: 'ERROR_TITLE_PWA_PHOTO',
+      video: 'ERROR_TITLE_PWA_VIDEO'
+    }
+
+
+    MSG_INSTRUCTIONS =
+      '<h2>' + PREFS.getMsg('INSTRUCTIONS_TITLE') + '</h2>' +
+      '<p>' + PREFS.getMsg('INSTRUCTIONS_LIST_HEADER') +
+      '<ul>';
+
+    if (PREFS.getInt('map'))
+      MSG_INSTRUCTIONS += '<li>' + PREFS.getMsg('INSTRUCTIONS_MAPS') + '</li>';
+    if (PREFS.getInt('your_media'))
+      MSG_INSTRUCTIONS += '<li>' + PREFS.getMsg('INSTRUCTIONS_YOUR_MEDIA') + '</li>' +
+          '<li>' + PREFS.getMsg('INSTRUCTIONS_YT') + '</li>';
+    if (PREFS.getInt('upload'))
+      MSG_INSTRUCTIONS += '<li>' + PREFS.getMsg('INSTRUCTIONS_UPLOAD') + '</li>';
+    if (PREFS.getInt('search'))
+      MSG_INSTRUCTIONS += '<li>' + PREFS.getMsg('INSTRUCTIONS_SEARCH') + '</li>';
+
+    MSG_INSTRUCTIONS += '</ul></p><p>' + PREFS.getMsg('INSTRUCTIONS_FOOTER') + '</p><br><br>';
+
+
+    //Add buttons according to gadget preferences
+    PICKER_TAB_NAMES = {};
+
+    if (PREFS.getInt('map'))
+      PICKER_TAB_NAMES.map = PREFS.getMsg('BUTTON_MAP_LOC');
+    if (PREFS.getInt('your_media'))
+      PICKER_TAB_NAMES.your_media = PREFS.getMsg('BUTTON_YOUR_MEDIA');
+    if (PREFS.getInt('upload'))
+      PICKER_TAB_NAMES.upload = PREFS.getMsg('BUTTON_UPLOAD');
+    if (PREFS.getInt('bulk_upload'))
+      PICKER_TAB_NAMES.bulk_upload = PREFS.getMsg('BUTTON_BULK_UPLOAD');
+    if (PREFS.getInt('search'))
+      PICKER_TAB_NAMES.search = PREFS.getMsg('BUTTON_SEARCH');
+
+    PICKER_TAB_NAMES.info = PREFS.getMsg('BUTTON_HTML');
+
+
+    DEBUG = true;
+
+    /**
+      Init functions that depend on jquery & picker loading after apis load
+    */
+    function init () {
+
+      function logToConsole(obj) {
+        if (DEBUG) console.log(obj);
+      }
+
+      /**
+        Extracts params from a URL parameter string and returns an object
+      */
+      function getParamsFromUrl(url) {
+        //From: http://stackoverflow.com/questions/901115/get-query-string-values-in-javascript
+        var urlParams = {};
+        (function () {
+            var e,
+                a = /\+/g,  // Replace appendVideoInfo symbol w/ a space
+                r = /([^&=]+)=?([^&#]*)/g,
+                d = function (s) { return decodeURIComponent(s.replace(a, ' ')); },
+                q = url;
+
+            while (e = r.exec(q))
+               urlParams[d(e[1])] = d(e[2]);
+        })();
+        return urlParams;
+      }
+
+
+      /**
+        Creates a URL parameter string from an object/associative array
+      */
+      function getUrlParametersFromArray (obj, delimiter) {
+        var urlParams = [];
+        for (key in obj) {
+          urlParams.push(key + '=' + obj[key]);
+        }
+        return urlParams.join(delimiter);
+      }
+
+
+      var isPrivateAlbum = function(audience) {
+        return (['public', 'publicDomain', 'limited'].indexOf(audience) == -1);
+      }
+
+
+      var isLimitedAlbum = function(audience) {
+        return (audience == 'limited');
+      }
+
+
+      var fixYouTubeLink = function(url) {
+        return (url.indexOf('watch') == -1) ?
+            url.replace('?v=', 'watch?v=') : url;
+      }
+
+
+      var getYtFeedUrl = function(doc) {
+        //The plain video feed fails w/ Feeds API, so request video repsonses
+        return 'https://gdata.youtube.com/feeds/api/videos/' + doc.id + '/responses';
+        //return 'https://gdata.youtube.com/feeds/api/videos/' + doc.id + '?v=2';
+      }
+
+
+      var isIconSize = function(width) {
+        return (ICON_IMG_WIDTHS.indexOf(width) != -1);
+      }
+
+
+      var getPicasaFeedFromDoc = function(doc) {
+        var data = {};
+        var user_album_item = doc.url.replace(PWA_DOMAIN, '').split('/');
+        data.user = user_album_item[0];
+        data.album_name = (user_album_item.length > 1) ?
+            (user_album_item[1]).split('#')[0] : null;
+        data.authkey = (doc.url.indexOf('authkey') != -1) ?
+            getParamsFromUrl(doc.url.split('?')[1])['authkey'] : '';
+        data.has_authkey = (data.authkey != '');
+        return data;
+      }
+
+
+      /**
+        Creates a Picasa feed base URL given user, album and optional authkey
+      */
+      function getPicasaBaseFeed(user_id, album_id) {
+        return PWA_DOMAIN + 'data/feed/api/user/' + user_id +
+            '/albumid/' + album_id;
+      }
+
+
+      /**
+        Creates a Picasa video feed URL given user, album, video, & opt. authkey
+      */
+      function getPicasaVideoFeed (user_id, album_id, video_id, authkey){
+        var feed_url = getPicasaBaseFeed(user_id, album_id) +
+            '?alt=rss&fields=item[gphoto:id=\'' + video_id + '\']';
+        feed_url += (authkey != '') ? '&authkey=' + authkey: '';
+        return feed_url;
+      }
+
+
+      /**
+        Creates a Picasa album feed URL given user, album and optional authkey
+      */
+      function getPicasaAlbumFeed (user_id, album_id, authkey){
+        var feed_url = getPicasaBaseFeed(user_id, album_id) +
+            '?alt=rss&kind=photo&hl=en_US';
+        return feed_url + (authkey != '') ? '&authkey=' + authkey: '';
+      }
+
+
+      /**
+        Detects cropped Picasa photo URLs & returns URL of desired width
+      */
+      function picasaUrlFormatter (img_url, width) {
+        //If this is an icon, uses "s" so major dimension == width
+        // else, ensure that the image width == width
+        var resize = (isIconSize(width) && width != 0) ? 's' : 'w';
+        var url_array = img_url.split('/');
+
+        //TODO: Explain what's being done here
+        if (url_array[url_array.length - 2].search(/s[0-9]+(-c)?/) != -1)
+          url_array.splice(url_array.length - 2, 1, resize + width);
+        else
+          url_array.splice(url_array.length - 1, 0, resize + width);
+        return url_array.join('/');
+      }
+
+
+      /**
+        Simple object for holding tab sets
+       */
+      var TabData = function(name) {
+        this.name = name;
+        this.preview = null;
+        this.fields = [];
+      };
+
+
+      TabData.prototype = {
+        setPreview: function(preview_code) {
+          this.preview = preview_code;
+        },
+
+        addField: function(name, value, type, link) {
+          this.fields.push({name: name, value: value, type: type, link: link});
+        },
+
+        getFieldsHtml: function(div) {
+          var arr = [];
+          for (i=0; i < this.fields.length; i++) {
+            var field = this.fields[i];
+            arr.push(getLabelTextFieldHtml(
+                field.name, field.value, 30, field.link)
+            );
+          }
+          return arr;
+        }
+      };
+
+
+      /**
+        Fetches an ATOM feed using Feeds API & sends results to callback
+      */
+      function fetchFeed (feed_url, cb_sucess, cb_failure, callback_params) {
+        logToConsole(feed_url);
+        var feed = new google.feeds.Feed(feed_url);
+        feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+        feed.load(function(result) {
+          if (result.error) {
+            logToConsole('Error: ' + feed_url +
+                ' (' + result.error.code + ') ' + result.error.message);
+            cb_failure(callback_params);
+            return false;
+          }
+          logToConsole(result);
+          cb_sucess(result, callback_params);
+        });
+      }
+
+
+      /**
+        YouTube Video Handler
+      */
+      var getYouTubeEmbedSet = function (embed_url, max_height, is_wide) {
+        var video_sizes = (is_wide) ? WIDE_VIDEO_RES : REG_VIDEO_RES;
+        var embed_set = [];
+        for (var i=0; i < video_sizes.length; i++) {
+          var size = video_sizes[i];
+          if (size.height <= max_height) {
+            var audio_only = (size.height == YT_AUDIO_ONLY_HEIGHT);
+            var embed_height = (AUTOHIDE == 0 || audio_only) ?
+                size.height + YT_CONTROLS_HEIGHT : size.height;
+            var flash_attr = new YT_DEFAULT_FLASH_VARS();
+            //Disable fullscreen for audio-only
+            if (audio_only)
+              flash_attr.allowfullscreen = 'false';
+
+            var yt_embed_url = embed_url;
+            if (yt_embed_url.indexOf('?') == -1)
+              yt_embed_url = yt_embed_url.replace('&fs', '?fs');
+            if (yt_embed_url.indexOf('version=3') == -1)
+              yt_embed_url = yt_embed_url.replace('?', '?version=3&');
+            var autoplay = (audio_only) ? 1 : AUTOPLAY;
+            var autohide = (audio_only) ? 0 : AUTOHIDE;
+
+            yt_embed_url += '&autoplay=' + autoplay;
+            flash_attr.autoplay = autoplay;
+
+            yt_embed_url += '&autohide=' + autohide;
+            flash_attr.autohide = autohide;
+
+            logToConsole(yt_embed_url);
+
+            var preview_code = makeFlashEmbedCode(
+                yt_embed_url, size.width, embed_height, flash_attr);
+            var tab_name = (audio_only) ?
+                PREFS.getMsg('AUDIO_ONLY') : size.width + 'x' + size.height;
+            var embed_code = preview_code.clone().wrap('<div>').parent().html();
+
+            var tab = new TabData(tab_name);
+            tab.setPreview(preview_code);
+            tab.addField(PREFS.getMsg('YT_EMDED_CODE'), embed_code, 'input', false);
+
+            embed_set.push(tab);
+          }
+        }
+        return embed_set;
+      }
+
+
+
+      /**
+        Extracts data from Picasa Video feed needed to create embed/preview code
+      */
+      function getPicasaFeedVideoData (video) {
+        if (video.getNamedItem('medium').value != 'video')
+          return false;
+        else {
+          var data = {};
+          data.width = parseInt(video.getNamedItem('width').value);
+          data.height = parseInt(video.getNamedItem('height').value);
+          data.wide_screen = (data.width / data.height > 1.4);
+
+          //Construct fmt_list & fmt_stream_map
+          var video_url = video.getNamedItem('url').value;
+          var video_params = video_url.split('?')[1];
+          var itag = getParamsFromUrl(decodeURIComponent(video_params)).itag;
+          var size = data.width + 'x' + data.height;
+          var fmt_info = (itag == 5) ?
+              [itag, size, 7, 0, 0]: [itag, size, 9, 0, 115];
+
+          data.fmt_list = fmt_info.join('/');
+          data.fmt_stream_map = [itag, video_url.replace(/,/g, '%2C')].join('|');
+          return data;
+        }
+      }
+
+
+      /**
+        Picasa Video embed code generator; yields a Google Gadget embed script
+      */
+      var getPicasaVideoEmbedCode = function (
+          width, height, params, audio_only) {
+        var url_params = {
+          url: PWA_VID_GADGET_URL,
+          up_user_id: params.user_id,
+          up_album_id: params.album_id,
+          up_video_id: params.video_id,
+          up_authkey: params.authkey,
+          up_autoplay: (audio_only) ? 1 : AUTOPLAY,
+          up_autohide: (audio_only) ? 0 : AUTOHIDE,
+          up_audio_only: audio_only,
+          w: width,
+          h: height,
+          synd: 'open',
+          output: 'js',
+          title: ''
+        }
+        return '<' + 'script src="http://www.gmodules.com/ig/ifr?' +
+            getUrlParametersFromArray(url_params, '&amp;') + '"></' + 'script>';
+      }
+
+
+      /**
+        Picasa Video preview code generator (direct embed of expiring videos)
+
+        Embed code for Picasa Videos uses a Google Gadget, so instead of
+        adding <script> tags to the DOM, just directly add the video in the same
+        way that the Gadget does.
+      */
+      var getPicasaVideoPreviewCode = function (
+          width, height, fmt_list, fmt_stream_map, audio_only) {
+        var flash_attr = new PWA_VIDEO_DEFAULT_FLASH_VARS();
+
+        //Disable fullscreen for audio-only
+        if (audio_only) flash_attr.allowfullscreen = 'false';
+        var flashvars = {
+          'fs': 1, 'hl': 'en', 'ps': 'picasaweb', 'playerapiid': 'uniquePlayerId',
+          'video_id': 'picasacid', 't': 1, 'auth_timeout': 86400000000,
+          'vq': 'auto', //large
+          'autoplay': (audio_only) ? 1 : AUTOPLAY,
+          'autohide': (audio_only) ? 0 : AUTOHIDE,
+          'fmt_list': encodeURIComponent(fmt_list.join(',')),
+          'fmt_stream_map': encodeURIComponent(fmt_stream_map.join(','))
+        };
+        flash_attr.flashvars = getUrlParametersFromArray(flashvars, '&');
+        return makeFlashEmbedCode(PWA_PLAYER, width, height, flash_attr);
+      }
+
+
+      /**
+        Async Picasa Video Feed Fetcher that adds tabs after feed is fetched
+      */
+      var getPicasaVideoAsync = function (doc, album_name, instructions,
+          feed, feed_url) {
+        callback_params = {
+          album_name: album_name,
+          media_url: doc.url,
+          album_id: doc.parentId,
+          video_id: doc.id,
+          user_id: feed.user,
+          authkey: feed.authkey,
+          has_authkey: feed.has_authkey,
+          instructions: instructions};
+        //TODO: Do we need a failure callback? We already checked for private albums
+        fetchFeed(feed_url, getPicasaVideoEmbedSet, null, callback_params);
+      }
+      
+
+      /**
+        Picasa Video Handler
+      */
+      var getPicasaVideoEmbedSet = function (result, params) {
+        var fmt_list = [];
+        var fmt_stream_map = [];
+        var video_params = false;
+        
+        var xml_results = google.feeds.getElementsByTagNameNS(
+            result.xmlDocument.getElementsByTagName('item')[0],
+            'http://search.yahoo.com/mrss/', 'content');
+
+        var max_width = 0;
+        for (var i = 0; i < xml_results.length; i++) {
+          video_params = getPicasaFeedVideoData(xml_results[i].attributes);
+          if (video_params) {
+            fmt_list.push(video_params.fmt_list);
+            fmt_stream_map.push(video_params.fmt_stream_map);
+            if (video_params.width > max_width)
+              max_width = video_params.width;
+          }
+        }
+
+        if ( !fmt_list && !fmt_stream_map)
+          logToConsole('No video in this feed.');
+        else {
+          //Reverse because highest res version need to be first
+          fmt_list.reverse();
+          fmt_stream_map.reverse();
+          var video_sizes = (video_params.wide_screen) ?
+              WIDE_VIDEO_RES : REG_VIDEO_RES;
+
+          var embed_set = [];
+          for (var i=0; i < video_sizes.length; i++) {
+            var size = video_sizes[i];
+            if (size.width <= max_width) {
+              var audio_only = (size.height == YT_AUDIO_ONLY_HEIGHT);
+              var embed_height = (AUTOHIDE == 0 || audio_only) ?
+                size.height + YT_CONTROLS_HEIGHT : size.height;
+              var preview_code = getPicasaVideoPreviewCode(size.width,
+                  embed_height, fmt_list, fmt_stream_map, audio_only);
+              var embed_code = getPicasaVideoEmbedCode(
+                  size.width, embed_height, params, audio_only);
+              var tab_name = (audio_only) ?
+                  PREFS.getMsg('AUDIO_ONLY') : size.width + 'x' + size.height;
+
+              var tab = new TabData(tab_name);
+              tab.setPreview(preview_code);
+              tab.addField(PREFS.getMsg('GADGET_EMBED_CODE'), embed_code,
+                    'input', false);
+
+              embed_set.push(tab);
+            }
+          }
+
+          appendResults(
+              params.album_name,
+              params.instructions,
+              embed_set,
+              params.media_url,
+              PREFS.getMsg('LINK_PICASA_VIDEO'),
+              params.has_authkey);
+        }
+      }
+
+
+      /**
+        Photo/Image Handler (for Picasa photos and Image Search)
+      */
+      var getPhotoEmbedSet = function (doc, url_manipulator) {
+        var img = doc.thumbnails[doc.thumbnails.length - 1];
+        var aspect = parseInt(img.height) / parseInt(img.width);
+
+        var embed_set = [];
+        for (var i=0; i < PHOTO_WIDTHS.length; i++) {
+          var thumb_width = parseInt(PHOTO_WIDTHS[i]);
+          var thumb_height = Math.round(thumb_width * aspect);
+          var thumb_url = (url_manipulator) ?
+              url_manipulator(img.url, thumb_width) : img.url;
+
+          //Only add thumbs with PHOTO_WIDTHS <= largest thumb
+          if (thumb_width <= img.width) {
+            var embed_code = (thumb_width == 0) ?
+                getImageHtml(thumb_url) : getImageHtml(thumb_url, thumb_width);
+
+            var tab_name = null;
+            if (isIconSize(thumb_width))
+              tab_name = PREFS.getMsg('ICON') + ' ' + thumb_width;
+            else if (thumb_width === 0)
+              tab_name = PREFS.getMsg('ORIGINAL')
+            else
+              tab_name = thumb_width + 'x' + thumb_height;
+
+            var tab = new TabData(tab_name);
+            tab.setPreview(embed_code);
+            tab.addField(PREFS.getMsg('IMG_LINK'), thumb_url, 'input', thumb_url);
+            tab.addField(PREFS.getMsg('IMG_EMBED_CODE'), embed_code, 'input', false);
+            embed_set.push(tab);
+          }
+        }
+        return embed_set;
+      }
+
+
+      /**
+        Picasa Album Handler
+      */
+      var getPicasaSlideshowEmbedSet = function (doc) {
+        var embed_set = [];
+        var flash_attr = new SLIDESHOW_DEFAULT_FLASH_VARS();
+
+        /*
+        var user = doc.url.replace(PWA_DOMAIN, '').split('/', 1)[0];
+        var authkey = (doc.url.indexOf('authkey') != -1) ?
+            getParamsFromUrl(doc.url.split('?')[1])['authkey'] : '';
+        */
+        var feed = getPicasaFeedFromDoc(doc);
+
+        var flashvars = {
+          host: 'picasaweb.google.com',
+          hl: 'en_US',
+          feat: 'flashalbum',
+          RGB: '0x000000',
+          feed: encodeURIComponent(
+              getPicasaAlbumFeed(feed.user, doc.id, feed.authkey))
+        }
+        if (AUTOPLAY != 0)
+          flashvars.noautoplay = 1;
+        flash_attr.flashvars = getUrlParametersFromArray(flashvars, '&');
+
+        for (var i=0; i < SLIDESHOW_RES.length; i++) {
+          var size = SLIDESHOW_RES[i];
+          var tab = new TabData(size.width + 'x' + size.height);
+          tab.setPreview(makeFlashEmbedCode(
+              PWA_SLIDESHOW_PLAYER, size.width, size.height, flash_attr));
+          tab.addField(PREFS.getMsg('PWA_SLIDESHOW_CODE'),
+              preview_code.clone().wrap('<div>').parent().html(),
+              'input',
+              false);
+          embed_set.push(tab);
+        }
+        return embed_set;
+      }
+
+
+      /**
+        Creates HTML for a <img>
+      */
+      var getImageHtml = function (src, width) {
+        return (width) ? '<img width="' + width + '" style="width: ' + width +
+            'px" src="' + src + '" />' : '<img src="' + src + '" />';
+      }
+
+
+      /**
+        Creates HTML for a linked <img>
+      */
+      var getLinkedImageHtml = function (src, width, href) {
+        return $('<a></a>').attr({href: href, target: '_blank'})
+            .append(getImageHtml(src, width));
+      }
+
+
+      /**
+        Generic Flash embed code generator (for YouTube, Picasa Videos & Albums)
+      */
+      var makeFlashEmbedCode = function (swf_url, width, height, params) {
+        var obj = $('<object></object>').attr({width: width, height: height});
+        obj.append($('<param />').attr({name: 'movie', value: swf_url}));
+        for (item in params) {
+          obj.append($('<param />').attr({name: item, value: params[item]}));
+        }
+
+        //Add extra params form <embed> vs. <object>
+        params.type = 'application/x-shockwave-flash';
+        params.src = swf_url;
+        params.width = width;
+        params.height = height;
+        logToConsole(params);
+
+        return obj.append($('<embed />').attr(params));
+      }
+
+
+      /**
+        Create text input & opt. image link for users to copy/view content URLs
+       */
+      var getLabelTextFieldHtml = function (label, value, width, link) {
+        width = (typeof width !== 'undefined') ? width : 50;
+        link = (typeof link !== 'undefined') ? link : false;
+
+        var div = $('<div></div>').addClass('media_embed').append(
+          $('<label>' + label + '</label> '),
+          $('<input></input>', {
+              readonly: 'readonly',
+              type: 'text',
+              value: value,
+              size: width
+          }).addClass('url_box')
+        );
+
+        if (link)
+          div.append(getLinkedImageHtml(LINK_IMG_SRC, false, link));
+
+        return div;
+      }
+
+
+      /**
+        Clear existing tabs/content and create new ones
+       */
+      var makeTabs = function (content_items) {
+        var results_div = $('#' + RESULTS_DIV_ID);
+        //Hide and then destroy existing tabs before adding new ones
+        results_div.hide().tabs('destroy').empty();
+
+        //Create new tabs
+        $.each(content_items, function (index, item) {
+          results_div.append(item);
+        });
+
+        //Make the tabs selectable
+        $('input.url_box').click(function() {
+          this.focus();
+          this.select();
+        });
+
+        //Build the tabs
+        results_div.tabs().show();
+        gadgets.window.adjustHeight();
+        return results_div;
+      }
+
+
+
+      /**
+        Show tab/content for when Picasa feed fetch fails on private content
+       */
+      var privateYtVideoWarning = function (doc) {
+        privateContentWarning(
+            PREFS.getMsg('ERROR_TAB_YT_VIDEO'),
+            PREFS.getMsg('ERROR_TITLE_YT_VIDEO'),
+            PREFS.getMsg('ERROR_YOUTUBE_PRIVATE'),
+            PREFS.getMsg('ERROR_LINK_YT_VIDEO'),
+            doc.name,
+            fixYouTubeLink(doc.url),
+            doc.thumbnails[doc.thumbnails.length - 2]
+        );
+      }
+
+
+      /**
+        Show tab/content for when Picasa feed fetch fails on private content
+       */
+      var privatePicasaAlbumWarning = function (doc, album) {
+        privateContentWarning(
+            PREFS.getMsg('ERROR_TAB_PRIVATE_ABLUM'),
+            PREFS.getMsg(PWA_ERROR_MAPPING[doc.type]),
+            PREFS.getMsg('ERROR_PRIVATE_PICASA_WARNING'),
+            PREFS.getMsg('ERROR_LINK_PICASA_ALBUM'),
+            album.name,
+            album.url,
+            [ doc.thumbnails[doc.thumbnails.length - 2] ] //2nd to last thumb
+        );
+      }
+
+
+      var privateUploadPicasaAlbumWarning = function (docs, album) {
+        var thumbs = [];
+        for (var i=0; i < docs.length; i++)
+          thumbs.push(docs[i].thumbnails[1]);
+
+        privateContentWarning(
+            PREFS.getMsg('ERROR_TAB_PRIVATE_ABLUM'),
+            PREFS.getMsg('ERROR_TITLE_PWA_UPLOAD_ALBUM'),
+            PREFS.getMsg('ERROR_UPLOAD_PRIVATE_PICASA_PRIVATE'),
+            PREFS.getMsg('ERROR_LINK_PICASA_ALBUM'),
+            album.name,
+            album.url,
+            thumbs
+        );
+      }
+
+
+      var uploadPicasaAlbumSuccess = function (docs, album) {
+        var thumbs = [];
+        for (var i=0; i < docs.length; i++)
+          thumbs.push(docs[i].thumbnails[1]);
+
+        privateContentWarning(
+            PREFS.getMsg('ERROR_TAB_BULK_SUCCEEDED'),
+            PREFS.getMsg('SUCCEED_TITLE_PWA_UPLOAD_ALBUM'),
+            PREFS.getMsg('SUCCEED_UPLOAD_PICASA_PRIVATE'),
+            PREFS.getMsg('SUCCESS_LINK_PICASA_ALBUM'),
+            album.name,
+            album.url,
+            thumbs
+        );
+      }
+
+
+      /**
+        Show tab/content for when Picasa feed fetch fails on private content
+       */
+      var privateContentWarning = function (tab, title, message, link_header,
+          media_name, media_url, thumbs) {
+        var content_items = [];
+        var tab_id = 'failure_tabs_';
+        content_items.push($('<ul></ul>', {id: RESULTS_TABS_ID})
+            .append('<li><a href="#' + tab_id + '">' + tab + '</a></li>'));
+
+        var div = $('<div></div>', {id: tab_id}).addClass('failure_msg');
+        var html = '<h2>' + title + '</h2>' + message;
+        var media_url = media_url.split('#')[0];
+        html += '<h3 class="error_link_header">' + link_header + ' "' +
+        media_name + '"</h3>' +
+        '<p class="failure_link">' +
+        '<a target="_blank" href="' + media_url + '">' + media_url + '</a>' +
+        '<br><br>';
+
+        for (var i=0; i < thumbs.length; i++) {
+          logToConsole(thumbs[i]);
+          html += getImageHtml(thumbs[i].url, thumbs[i].width);
+        }
+        html += '</p>';
+        content_items.push($('<div></div>', {id: tab_id})
+          .addClass('failure_msg').append(html));
+        makeTabs(content_items);
+      }
+
+
+      /**
+        Show the Usage Instructions tab/content
+       */
+      var usageInstructionsContent = function () {
+        var content_items = [];
+        var tab_id = 'instructions_tabs_';
+        content_items.push(
+            $('<ul></ul>', {id: RESULTS_TABS_ID})
+            .append('<li><a href="#' + tab_id + '">' +
+                PREFS.getMsg('TAB_USAGE') + '</a></li>')
+        );
+
+        content_items.push($('<div></div>', {id: tab_id}).append(
+            MSG_INSTRUCTIONS + PREFS.getMsg('LIMITED_WARNING')));
+
+        makeTabs(content_items);
+      }
+
+
+      /**
+        Show tabs/content divs for Picked items
+       */
+      var appendResults = function (title, instructions, tabs, media_url, media, has_authkey) {
+        var content_items = [];
+
+        has_authkey = (typeof has_authkey !== 'undefined') ? has_authkey : false;
+        if (has_authkey) {
+          var more_button = $('<a id="limited_warning" href="#">' +
+              PREFS.getMsg('LEARN_MORE') + '</a>');
+              //.click(function () {usageInstructionsContent(); return false;});
+
+          content_items.push($('<p class="limited_header">' +
+              PREFS.getMsg('ITEM_LIMITED_ALBUM') + ' </p> ').append(more_button));
+        }
+
+        var tab_bar = $('<ul></ul>', {id: RESULTS_TABS_ID});
+
+        content_items.push(tab_bar);
+        $.each(tabs, function(index, tab) {
+          var tab_id = 'results_tabs_' + index;
+          tab_bar.append('<li><a href="#' + tab_id + '">' + tab.name + '</a></li>');
+
+          var div = $('<div></div>', {id: tab_id}).addClass('media_tab');
+          div.append('<h3>' + title + '</h3>');
+          div.append('<p>' + instructions + '</p>');
+
+          //Add source website links to the media asset
+          var asset_link = getLabelTextFieldHtml(media, media_url, 30, media_url);
+          div.append(asset_link);
+
+          var results_fields = tab.getFieldsHtml();
+          $.each(results_fields, function(index, field_html) {
+            div.append(field_html);
+          });
+
+          div.append($('<div></div>').addClass('media_preview').append(tab.preview));
+          content_items.push(div);
+          i = index;
+        });
+
+        if (has_authkey) {
+          tab_id = 'results_tabs_warning';
+          tab_bar.append('<li><a href="#results_tabs_warning">' +
+              PREFS.getMsg('TAB_LIMITED_WARNING') + '</a></li>');
+
+          content_items.push($('<div></div>', {id: tab_id}).append(
+              PREFS.getMsg('LIMITED_WARNING')));
+        }
+        var results_div = makeTabs(content_items);
+
+        $('#limited_warning').click(function(){
+          results_div.tabs('select', '#results_tabs_warning');
+          return void(0);
+        });
+      }
+
+
+
+
+      /**
+        specific handlers
+       */
+
+
+      var imageSearchSet = function(doc) {
+        appendResults(PREFS.getMsg('TITLE_SEARCH'),
+            PREFS.getMsg('COPY_INSTRUCTIONS_IMG_SEARCH'),
+            getPhotoEmbedSet(doc, false),
+            doc.url,
+            PREFS.getMsg('LINK_IMG')
+        );
+      }
+
+
+      //TODO: Explain why we pass in junk _feed_results
+      var youtubeSet = function(_feed_results, doc) {
+        appendResults(PREFS.getMsg('TITLE_YOUTUBE'),
+            PREFS.getMsg('COPY_INSTRUCTIONS_YOUTUBE'),
+            getYouTubeEmbedSet(doc.embedUrl, 480, false),
+            fixYouTubeLink(doc.url),
+            PREFS.getMsg('LINK_YT')
+        );
+      }
+
+
+      var picasaPhotoSet = function(doc, album) {
+        appendResults(
+            PREFS.getMsg('TITLE_PHOTO_FROM_ALBUM') + album.name,
+            PREFS.getMsg('COPY_INSTRUCTIONS_PHOTO_FROM_ALBUM'),
+            getPhotoEmbedSet(doc, picasaUrlFormatter),
+            doc.url,
+            PREFS.getMsg('LINK_PHOTO_PWA'),
+            isLimitedAlbum(album.audience)
+        );
+      }
+
+
+      var picasaVideoSet = function(doc, album) {
+        var feed_data = getPicasaFeedFromDoc(doc);
+        getPicasaVideoAsync(
+            doc,
+            PREFS.getMsg('TITLE_VIDEO_FROM_ALBUM') + album.name,
+            PREFS.getMsg('COPY_INSTRUCTIONS_PWA_VIDEO'),
+            feed_data,
+            getPicasaVideoFeed(feed_data.user, doc.parentId, doc.id,
+                feed_data.authkey)
+        );
+      }
+
+
+      var picasaAlbumSlideshowSet = function(album) {
+        appendResults(
+            PREFS.getMsg('TITLE_ALBUM') + album.name,
+            PREFS.getMsg('COPY_INSTRUCTIONS_ALBUM'),
+            getPicasaSlideshowEmbedSet(album),
+            album.url,
+            PREFS.getMsg('LINK_ALBUM_PWA'),
+            isLimitedAlbum(album.audience)
+        );
+      }
+
+
+      /**
+        Handler for map data returned by Picker
+       */
+      var mapDispatch = function (data) {
+        logToConsole(data);
+        if (data.action == 'cancel') return;
+        CURRENT_PICKER_TYPE = 'map';
+        var doc = data.docs[0];
+
+        var tab = new TabData(PREFS.getMsg('LOC_LAT_LON'));
+        if (doc.name != 'Untitled Location')
+          tab.addField(PREFS.getMsg('LOCATION_NAME'), doc.name, 'input');
+
+        //TODO: Comment on why we are doing this
+        if (typeof doc.addressLines !== 'undefined') {
+          var address = doc.addressLines.join(' ');
+          if (doc.name != address)
+            tab.addField(PREFS.getMsg('ADDRESS'), address, 'input', false);
+        }
+
+        tab.addField(PREFS.getMsg('LAT_LON'), doc.latitude.toFixed(6) +
+            '\t' + doc.longitude.toFixed(6), 'input');
+        tab.setPreview(getImageHtml(
+            doc.thumbnails[3].url, doc.thumbnails[3].width));
+
+        appendResults(PREFS.getMsg('TITLE_MAPS'),
+            PREFS.getMsg('COPY_INSTRUCTIONS_MAPS'), [tab], doc.url,
+            PREFS.getMsg('LINK_GMAPS'));
+      }
+
+
+      /**
+        Handler for Picasa data returned by Picker
+       */
+
+      var albumUploadDispatch = function(data) {
+        logToConsole(data);
+        if (data.action == 'cancel') return;
+        CURRENT_PICKER_TYPE = 'upload';
+        var album = data.docs[0];
+
+        if (isPrivateAlbum(album.audience))
+          privatePicasaAlbumWarning(album, album); //doc & album are the same
+        else
+          createAlbumUploadPicker(album);
+      }
+
+
+      var bulkUploadDispatch = function(data) {
+        logToConsole(data);
+        if (data.action == 'cancel') return;
+
+        CURRENT_PICKER_TYPE = 'bulk_upload';
+        var album = data.parents[0];
+
+        if (isPrivateAlbum(album.audience))
+          privateUploadPicasaAlbumWarning(data.docs, album);
+        else
+          uploadPicasaAlbumSuccess(data.docs, album);
+      }
+
+
+      /**
+        Handler for Picasa & YouTube data returned by Picker
+       */
+      var yourMediaDispatch = function (data, album) {
+        logToConsole(data);
+        if (data.action == 'cancel') return;
+
+        CURRENT_PICKER_TYPE = 'your_media';
+        var doc = data.docs[0];
+
+        if (doc.serviceId + doc.type == 'youtubevideo') //YouTube
+          fetchFeed(getYtFeedUrl(doc), youtubeSet, privateYtVideoWarning, doc);
+        else {
+          //If album was already passed in, it's from an upload
+          //otherwise, the doc is the album, otherwise it's parent
+          if (typeof album == 'undefined')
+            album = (doc.type == 'album') ? data.docs[0] : data.parents[0];
+            
+          if (isPrivateAlbum(album.audience))
+            privatePicasaAlbumWarning(doc, album);
+          else if (doc.type == 'photo')
+            picasaPhotoSet(doc, album);
+          else if (doc.type == 'video')
+            picasaVideoSet(doc, album);
+          else if (doc.type == 'album')
+            picasaAlbumSlideshowSet(album);
+        }
+      }
+
+
+      /**
+        Handler for Photo/Video search results returned by Picker
+       */
+      var searchDispatch = function (data) {
+        logToConsole(data);
+        if (data.action == 'cancel') return;
+
+        CURRENT_PICKER_TYPE = 'search';
+        var doc = data.docs[0];
+
+        if (doc.type == 'video')
+          youtubeSet(null, doc);
+        else if (doc.type == 'photo')
+          imageSearchSet(doc);
+        else
+          logToConsole('Unknown doc type: ' + doc.type);
+      }
+
+
+      /**
+        Create a Map Picker
+       */
+      var createMapPicker = function () {
+        //Only create picker if it's a different type
+        if (CURRENT_PICKER_TYPE != 'map') {
+          CURRENT_PICKER = new google.picker.PickerBuilder()
+            .enableFeature(google.picker.Feature.NAV_HIDDEN)
+            .addView(new google.picker.MapsView())
+            .setCallback(mapDispatch)
+            .setTitle(PREFS.getMsg('FIND_LOCATION'))
+            .build();
+        }
+        CURRENT_PICKER.setVisible(true);
+      }
+
+
+      /**
+        Create a Picker for user's Picasa and YouTube photos/videos
+       */
+      var createYourMediaPicker = function () {
+        //Only create picker if it's a different type
+        if (CURRENT_PICKER_TYPE != 'your_media') {
+          CURRENT_PICKER = new google.picker.PickerBuilder()
+            .addView(google.picker.ViewId.PHOTOS)
+            .addView(new google.picker.PhotosView()
+                .setType(google.picker.PhotosView.Type.UPLOADED))
+            .addView('photo-albums')
+            .addView(google.picker.ViewId.YOUTUBE)
+            .setCallback(yourMediaDispatch)
+            .setTitle(PREFS.getMsg('CHOOSE_YOUR_MEDIA'))
+            .build();
+        }
+        CURRENT_PICKER.setVisible(true);
+      }
+
+
+      /**
+        Create a Picker for Image/Video searches and features photos
+       */
+      var createSearchPicker = function () {
+        //Only create picker if it's a different type
+        if (CURRENT_PICKER_TYPE != 'search') {
+          CURRENT_PICKER = new google.picker.PickerBuilder()
+            .addView(google.picker.ViewId.IMAGE_SEARCH)
+            .addView(google.picker.ViewId.VIDEO_SEARCH)
+            .addView(new google.picker.PhotosView()
+                .setType(google.picker.PhotosView.Type.FEATURED))
+            .setCallback(searchDispatch)
+            .setTitle(PREFS.getMsg('SEARCH_PHOTOS_VIDEOS'))
+            .build();
+        }
+        CURRENT_PICKER.setVisible(true);
+      }
+
+
+      /**
+        Create a Picker for choosing an album to upload to
+       */
+      var createAlbumPicker = function (bulk) {
+        //Always create a new picker for Uploads
+        CURRENT_PICKER = new google.picker.PickerBuilder()
+          .enableFeature(google.picker.Feature.NAV_HIDDEN)
+          .addView('photo-albums')
+          .setCallback(albumUploadDispatch)
+          .setTitle(PREFS.getMsg('CHOOSE_ALBUM_TO_UPLOAD'))
+          .build();
+        CURRENT_PICKER.setVisible(true);
+      }
+
+
+      /**
+        After choosing an album with createAlbumUploadPicker(), upload items
+       */
+      var createAlbumUploadPicker = function (album) {
+        //Always create a new picker for Uploads
+        CURRENT_PICKER = new google.picker.PickerBuilder()
+          .addView('upload/photos')
+          .addView('upload/videos')
+          .addView(google.picker.ViewId.WEBCAM)
+          .setCallback(function (data) {
+              yourMediaDispatch(data, album);
+          })
+          .setUploadToAlbumId(album.id)
+          .setTitle(PREFS.getMsg('CHOOSE_MEDIA_TO_UPLOAD'))
+          .build();
+        CURRENT_PICKER.setVisible(true);
+      }
+
+
+      var createBulkUploadPicker = function() {
+        //Always create a new picker for Uploads
+        CURRENT_PICKER = new google.picker.PickerBuilder()
+          .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+          .enableFeature(google.picker.Feature.NAV_HIDDEN)
+          .addView(google.picker.ViewId.PHOTO_UPLOAD)
+          .setCallback(bulkUploadDispatch)
+          .setTitle(PREFS.getMsg('CHOOSE_ALBUM_TO_BULK_UPLOAD'))
+          .build();
+        CURRENT_PICKER.setVisible(true);
+      }
+
+
+      /**
+        Create buttons for each Picker type
+       */
+      var appendPickerTabs = function () {
+
+        for (type in PICKER_TAB_NAMES) {
+          var button = $('<button>' + PICKER_TAB_NAMES[type] + '</button>',
+              {id: type, type: 'button'});
+
+          switch (type) {
+            case 'map':
+              button.click(function () {createMapPicker()});
+              break;
+
+            case 'your_media':
+              button.click(function () {createYourMediaPicker()});
+              break;
+
+            case 'upload':
+              button.click(function () {createAlbumPicker()});
+              break;
+
+            case 'bulk_upload':
+              button.click(function () {createBulkUploadPicker()});
+              break;
+
+            case 'search':
+              button.click(function () {createSearchPicker()});
+              break;
+
+            case 'info':
+              button.click(function () {usageInstructionsContent()});
+              break;
+
+            default:
+              logToConsole('Unknown Picker request.');
+          }
+
+          $('#' + PICKER_LAUNCHER_DIV_ID).append(button);
+        }
+        $('button', '#' + PICKER_LAUNCHER_DIV_ID).button();
+      }
+
+      appendPickerTabs();
+      usageInstructionsContent();
+  }
+
+    </script>
+    <h4>dev9</h4>
+    <div id="media_picker" style="overflow: auto;">
+      <div id="picker_launcher" style="overflow: auto;"></div>
+      <div id="results" style="overflow: auto;"></div>
+    </div>
+]]></Content>
+</Module>
