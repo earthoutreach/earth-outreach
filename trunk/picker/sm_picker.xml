@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs
-      title="DEV Embed an unlisted or public Picasa Video on your webpage."
-      description="Embed an unlisted or public Picasa Video on your webpage."
+      title="__MSG_GADGET_TITLE__"
+      description=""
       author="Sean Askay"
       author_email="alchemist@google.com"
       author_location="Mountain View, CA USA"
@@ -13,9 +13,7 @@
     <Locale lang="pt" messages="http://earth-outreach.googlecode.com/svn/trunk/picker/lang/pt_ALL.xml"/>
 
     <Require feature="dynamic-height"/>
-    <Require feature="flash"/>
     <Require feature="minimessage"/>
-    <Require feature="setprefs"/>
   </ModulePrefs>
 
   <UserPref name="map"  default_value="1" required="true" datatype="enum" display_name="Enable Map">
@@ -1327,7 +1325,6 @@ Embed Option: Autoplay">
   }
 
     </script>
-    <h4>dev9</h4>
     <div id="media_picker" style="overflow: auto;">
       <div id="picker_launcher" style="overflow: auto;"></div>
       <div id="results" style="overflow: auto;"></div>

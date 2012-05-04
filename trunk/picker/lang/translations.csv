@@ -1,4 +1,5 @@
 msg,translated,pt,en
+GADGET_TITLE,n,Selecionador de Mídiae e Mapa,Map and Media Picker
 ADDRESS,y,Endereço:,Address:
 BUTTON_BULK_UPLOAD,y,Bulk Upload,Bulk Upload
 BUTTON_HTML,y,Ajuda,help
@@ -22,20 +23,16 @@ ITEM_LIMITED_ALBUM,y,"Este item pertence a um álbum de acesso ""Restrito"" do P
 LAT_LON,y,Latitude e Longitude:,Latitude & Longitude:
 LEARN_MORE,y,Mais informações,Learn more
 LIMITED_WARNING,y,"<h3>Aviso: Álbuns de Acesso Limitado</h3>
-<p>Ao selecionar uma foto, vídeo ou slideshow de um álbum do Picasa cujo compartilhamento seja “Restrito para pessoas que possuam um link"", você fornece um “código de autorização” para o acesso a esse conteúdo. Isso é necessário para inserir itens de um álbum “Restrito”. Isto inclui o seu álbum <a target=""_blank"" href="" 
-http://support.google.com/picasa/bin/answer.py?answer=73970"">DropBox</a> do Picasa.</p>
+<p>Ao selecionar uma foto, vídeo ou slideshow de um álbum do Picasa cujo compartilhamento seja “Restrito para pessoas que possuam um link"", você fornece um “código de autorização” para o acesso a esse conteúdo. Isso é necessário para inserir itens de um álbum “Restrito”. Isto inclui o seu álbum DropBox do Picasa.</p>
 <p>Note que esse código de autorização pode ser descoberto e utilizado por outras pessoas para visualizar todas as fotos/vídeos contidos no álbum com compartilhamento “Restrito para pessoas que possuam um link”.</p>
 <p>Todas as fotos e vídeos carregados através desta ferramenta, incluindo as gravações com webcam feitas aqui, serão inseridas do seu DropBox do Picasa, que é um álbum de acesso “Restrito para pessoas que possuam um link”.</p>
 <p>Caso você não deseje permitir o acesso acidental de outras pessoas a determinadas fotos e vídeos do seu DropBox ou outros álbuns “Restritos para pessoas que possuam um link”, você deverá mover ou copiar os itens que você pretende inserir para um álbum “Público na web”.</p>
 <p>Esta ferramenta avisará quando você selecionar um item de um álbum “Restrito” e lembrará você sobre este assunto.</p>
-Encontre mais informações sobre o compartilhamento de álbuns do Picasa nos seguintes locais:
-<ul><li><a target=""_blank"" href=""http://support.google.com/picasa/
-bin/answer.py?answer=39551"">Opções de compartilhamento do Picasa</a>
-    <li><a target=""_blank"" href=""http://support.google.com/picasa/
-bin/answer.py?answer=39551"">Opções de compartilhamento do Picasa para usuários de aplicações do Google</a>
-<li><a target=""_blank"" href=""http://support.google.com/picasa/bin/
-answer.py?answer=48446"">Sobre “códigos de autorização” e como alterá-los</a>
-</ul></p>","<h3>Warning: Limited Access Albums</h3>
+<ul>Encontre mais informações sobre o compartilhamento de álbuns do Picasa nos seguintes locais:
+<li>Opções de compartilhamento do Picasa</li>
+<li>Opções de compartilhamento do Picasa para usuários de aplicações do Google</li>
+<li>Sobre “códigos de autorização” e como alterá-los</li>
+<ul>","<h3>Warning: Limited Access Albums</h3>
 <p>When you select a photo, video or slideshow from a Picasa album that has 
 ""Limited, anyone with a link"" sharing you provide an ""authorization 
 key"" to access that content. This is required to embed items from a  
