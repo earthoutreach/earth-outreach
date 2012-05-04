@@ -9,8 +9,8 @@
       author_affiliation="Google Inc"
       width="500"
       height="500">
-    <Locale messages="http://unchartable.googlecode.com/svn/trunk/misc/sm/en_ALL.xml?foo=bar"/>
-    <Locale lang="pt" messages="http://unchartable.googlecode.com/svn/trunk/misc/sm/pt_ALL.xml?foo=bar"/>
+    <Locale messages="http://earth-outreach.googlecode.com/svn/trunk/picker/lang/en_ALL.xml"/>
+    <Locale lang="pt" messages="http://earth-outreach.googlecode.com/svn/trunk/picker/lang/pt_ALL.xml"/>
 
     <Require feature="dynamic-height"/>
     <Require feature="flash"/>
@@ -149,11 +149,9 @@ Embed Option: Autoplay">
     RESULTS_TABS_ID = 'results_tabs';
 
     PWA_DOMAIN = 'https://picasaweb.google.com/';
-    //PWA_VID_GADGET_URL =
-'http://hosting.gmodules.com/ig/gadgets/file/112339596650419432585/picasa_video.xml'
-    PWA_VID_GADGET_URL = 'http://unchartable.googlecode.com/svn/trunk/misc/sm/picasa_video_embedder.xml'
+    PWA_VID_GADGET_URL = 'https://earth-outreach.googlecode.com/svn/trunk/picasa_video_embedder/picasa_video_embedder.xml'
 
-    LINK_IMG_SRC = 'https://unchartable.googlecode.com/svn/trunk/misc/sm/open.gif';
+    LINK_IMG_SRC = 'http://earth-outreach.googlecode.com/svn/trunk/picker/open.gif';
 
     YT_CONTROLS_HEIGHT = 35;
     YT_AUDIO_ONLY_HEIGHT = 0;
