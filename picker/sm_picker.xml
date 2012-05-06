@@ -761,7 +761,8 @@ Embed Option: Autoplay">
         Generic Flash embed code generator (for YouTube, Picasa Videos & Albums)
       */
       var makeFlashEmbedCode = function (style, swf_url, width, height, params) {
-        var obj = $('<object></object>').attr({width: width, height: height});
+        var obj = $('<object></object>')
+            .attr({width: width, height: height}).addClass(style);
         obj.append($('<param />').attr({name: 'movie', value: swf_url}));
         for (item in params) {
           obj.append($('<param />').attr({name: item, value: params[item]}));
