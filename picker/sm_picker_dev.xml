@@ -345,8 +345,9 @@ Embed Option: Autoplay">
         Creates a Picasa feed base URL given user, album and optional authkey
       */
       function getPicasaBaseFeed(user_id, album_id) {
-        return PWA_DOMAIN + 'data/feed/api/user/' + user_id +
+        var feed_url = PWA_DOMAIN + 'data/feed/api/user/' + user_id +
             '/albumid/' + album_id;
+        return feed_url;
       }
 
 
@@ -367,7 +368,8 @@ Embed Option: Autoplay">
       function getPicasaAlbumFeed (user_id, album_id, authkey){
         var feed_url = getPicasaBaseFeed(user_id, album_id) +
             '?alt=rss&kind=photo&hl=en_US';
-        return feed_url + (authkey != '') ? '&authkey=' + authkey: '';
+        feed_url += (authkey != '') ? '&authkey=' + authkey: '';
+        return feed_url;
       }
 
 
@@ -1326,7 +1328,6 @@ Embed Option: Autoplay">
   }
 
     </script>
-    <!-- __MSG_PICKER_LANG__ -->
     <div id="media_picker" style="overflow: auto;">
       <div id="picker_launcher" style="overflow: auto;"></div>
       <div id="results" style="overflow: auto;"></div>
