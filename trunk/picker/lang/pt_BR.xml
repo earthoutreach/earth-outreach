@@ -1,0 +1,129 @@
+<messagebundle>
+  <msg name="PICKER_LANG">pt-BR</msg>
+  <msg name="ADDRESS">Endereço:</msg>
+  <msg name="BUTTON_BULK_UPLOAD">Upload em massa</msg>
+  <msg name="BUTTON_HTML">Ajuda</msg>
+  <msg name="BUTTON_MAP_LOC">Mapeie um local</msg>
+  <msg name="BUTTON_SEARCH">Pesquisa de Vídeos e Fotos</msg>
+  <msg name="BUTTON_UPLOAD">Upload e Webcam</msg>
+  <msg name="BUTTON_YOUR_MEDIA">Suas fotos, vídeos e álbuns</msg>
+  <msg name="FIND_LOCATION">Mapeie um local</msg>
+  <msg name="GADGET_EMBED_CODE">Código para incorporar  vídeo do Picasa:</msg>
+  <msg name="IMG_EMBED_CODE">Código para incorporar imagem:</msg>
+  <msg name="IMG_LINK">Link direto para imagem:</msg>
+  <msg name="INSTRUCTIONS_FOOTER">Clique em um dos botões acima para iniciar o processo!</msg>
+  <msg name="INSTRUCTIONS_LIST_HEADER">Bem-vindo ao Dispositivo "Map &amp; Media Picker". Esta ferramenta pode ser utilizada para obter links e códigos para imbutir de:</msg>
+  <msg name="INSTRUCTIONS_MAPS">Locais no Mapa</msg>
+  <msg name="INSTRUCTIONS_SEARCH">Fotos e vídeos encontrados na web</msg>
+  <msg name="INSTRUCTIONS_TITLE">Instruções</msg>
+  <msg name="INSTRUCTIONS_UPLOAD">Fotos de uploads e gravações de webcams</msg>
+  <msg name="INSTRUCTIONS_YOUR_MEDIA">Fotos, vídeos e slideshows do Picasa</msg>
+  <msg name="INSTRUCTIONS_YT">Vídeos do YouTube</msg>
+  <msg name="ITEM_LIMITED_ALBUM">Este item pertence a um álbum de acesso "Restrito" do Picasa.</msg>
+  <msg name="LAT_LON">Latitude e Longitude:</msg>
+  <msg name="LEARN_MORE">Mais informações</msg>
+  <msg name="LIMITED_WARNING">&lt;h3&gt;Aviso: Álbuns de Acesso Limitado&lt;/h3&gt;
+&lt;p&gt;Ao selecionar uma foto, vídeo ou slideshow de um álbum do Picasa cujo compartilhamento seja “Restrito para pessoas que possuam um link", você fornece um “código de autorização” para o acesso a esse conteúdo. Isso é necessário para inserir itens de um álbum “Restrito”. Isto inclui o seu álbum DropBox do Picasa.&lt;/p&gt;
+&lt;p&gt;Note que esse código de autorização pode ser descoberto e utilizado por outras pessoas para visualizar todas as fotos/vídeos contidos no álbum com compartilhamento “Restrito para pessoas que possuam um link”.&lt;/p&gt;
+&lt;p&gt;Todas as fotos e vídeos carregados através desta ferramenta, incluindo as gravações com webcam feitas aqui, serão inseridas do seu DropBox do Picasa, que é um álbum de acesso “Restrito para pessoas que possuam um link”.&lt;/p&gt;
+&lt;p&gt;Caso você não deseje permitir o acesso acidental de outras pessoas a determinadas fotos e vídeos do seu DropBox ou outros álbuns “Restritos para pessoas que possuam um link”, você deverá mover ou copiar os itens que você pretende inserir para um álbum “Público na web”.&lt;/p&gt;
+&lt;p&gt;Esta ferramenta avisará quando você selecionar um item de um álbum “Restrito” e lembrará você sobre este assunto.&lt;/p&gt;
+&lt;ul&gt;Encontre mais informações sobre o compartilhamento de álbuns do Picasa nos seguintes locais:
+&lt;li&gt;Opções de compartilhamento do Picasa&lt;/li&gt;
+&lt;li&gt;Opções de compartilhamento do Picasa para usuários de aplicações do Google&lt;/li&gt;
+&lt;li&gt;Sobre “códigos de autorização” e como alterá-los&lt;/li&gt;
+&lt;ul&gt;</msg>
+  <msg name="LINK_ALBUM_PWA">Link para álbum do Picasa:</msg>
+  <msg name="LINK_GMAPS">Link para o local no Google Maps:</msg>
+  <msg name="LINK_IMG">Link para foto do website:</msg>
+  <msg name="LINK_PHOTO_PWA">Link para foto do Picasa:</msg>
+  <msg name="LINK_PICASA_VIDEO">Link para vídeo do Picasa:</msg>
+  <msg name="LINK_YT">Link para vídeo do YouTube:</msg>
+  <msg name="LOC_LAT_LON">Latitude e Longitude do Local</msg>
+  <msg name="LOCATION_NAME">Nome do Local:</msg>
+  <msg name="PICKER_LANG">pt</msg>
+  <msg name="PWA_SLIDESHOW_CODE">Código para incorporar slideshow:</msg>
+  <msg name="TAB_LIMITED_WARNING">Informações sobre álbuns restritos</msg>
+  <msg name="TAB_USAGE">Como utilizar esta ferramenta</msg>
+  <msg name="YT_EMDED_CODE">Código para incorporar vídeo do YouTube:</msg>
+  <msg name="AUDIO_ONLY">somente o áudio </msg>
+  <msg name="BUTTON_YOUR_ICONS">ícones</msg>
+  <msg name="CHOOSE_ALBUM_TO_BULK_UPLOAD">Upload em massa: Colocar uma ou mais fotos e vídeos</msg>
+  <msg name="CHOOSE_ALBUM_TO_UPLOAD">Upload: Passo 1 - Escolha um álbum do Picasa</msg>
+  <msg name="CHOOSE_MEDIA_TO_UPLOAD">Upload: Passo 2 - Selecione uma foto ou vídeo para carregar</msg>
+  <msg name="CHOOSE_YOUR_MEDIA">Suas fotos, vídeos e slideshows de álbuns </msg>
+  <msg name="COPY_INSTRUCTIONS_ALBUM">Instruções: 1) Selecione um tamanho adequado para o seu Slideshow Album Picasa. 2) Decida se você quer uma "ligação directa" para o álbum ou um trecho de HTML para incorporar o slideshow. 3) Clique no campo desejado e copiar (Control-C). 4) Cole no local desejado na planilha Mapper.</msg>
+  <msg name="COPY_INSTRUCTIONS_IMG_SEARCH">Instruções: 1) Selecione um tamanho adequado para a imagem que você encontrou ao pesquisar. 2) Decida se você quer uma "ligação directa" à imagem, um trecho de HTML para incorporar ou apenas a URL para esta imagem na internet. 3) Clique no campo desejado e copiar (Control-C). 4) Cole no local desejado na planilha Mapper.</msg>
+  <msg name="COPY_INSTRUCTIONS_MAPS">Instruções: 1) Decida se você quer uma "ligação directa" para este local no Google Maps, ou a latitude e longitude para uso em Mapper planilha. 2) Clique no campo desejado e copiar (Control-C). 4) Cole no local desejado na planilha Mapper.</msg>
+  <msg name="COPY_INSTRUCTIONS_PHOTO_FROM_ALBUM">Instruções: 1) Selecione um tamanho adequado para sua foto. 2) Decida se você quer uma "ligação directa" à imagem, um trecho de HTML para incorporar ou apenas a URL para esta imagem no Picasa. 3) Clique no campo desejado e copiar (Control-C). 4) Cole no local desejado na planilha Mapper.</msg>
+  <msg name="COPY_INSTRUCTIONS_PICASA_VIDEO">Instruções: 1) Selecione um tamanho adequado para o seu vídeo Picasa. 2) Decida se você quer uma "ligação directa" para o vídeo no Picasa ou um trecho de HTML para incorporar o vídeo. 3) Clique no campo desejado e copiar (Control-C). 4) Cole no local desejado na planilha Mapper.
+</msg>
+  <msg name="COPY_INSTRUCTIONS_YOUTUBE">Instruções: 1) Selecione um tamanho adequado para o seu vídeo do YouTube. 2) Decida se você quer uma "ligação directa" para o vídeo no YouTube ou um trecho de HTML para incorporar o vídeo. 3) Clique no campo desejado e copiar (Control-C). 4) Cole no local desejado na planilha Mapper.</msg>
+  <msg name="ERROR_LINK_PICASA_ALBUM">Link para Álbum particular do Picasa:</msg>
+  <msg name="ERROR_LINK_YT_VIDEO">Link para o vídeo do YouTube privado:</msg>
+  <msg name="ERROR_PRIVATE_CONTENT">Conteúdo privada! </msg>
+  <msg name="ERROR_PRIVATE_PICASA_WARNING">O item selecionado a partir do Picasa é, provavelmente, em um
+&lt;a target="_blank" href="http://support.google.com/picasa/bin/
+answer.py?answer=39551"&gt;álbum de "privado" ou "limitada"&lt;/a&gt;,
+que significa que você não pode colocá-la em outro site!&lt;/p&gt;
+&lt;p&gt;Você tem que fazer este álbum "Público na internet" ou
+"Limitado, qualquer pessoa com um link" (&lt;a target="_blank" href="
+http://support.google.com/picasa/bin/answer.py?answer=39551
+"&gt;mais informações&lt;/a&gt;) OU também copiar a foto / vídeo em um
+novo álbum / diferente que é "público" ou "limitada"
+(&lt;a target="_blank" href="http://support.google.com/picasa/bin/
+answer.py?answer=62703"&gt;more info&lt;/a&gt;). Abaixo está um link para seu álbum, caso você queira alterar as permissões ou copiar / mover o item para outro álbum. Aqui estão algumas instruções sobre
+ &lt;a target="_blank" href="http://support.google.com/picasa/bin/answer.py?answer=113516"&gt;como alterar as permissões&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Se você tiver uma conta do Google Apps, pode não ser possível para
+que você compartilhe seus álbuns como "Público" ou "Limitado, com link"
+(&lt;a target="_blank" href="http://support.google.com/picasa/bin/
+answer.py?answer=187194"&gt;more info&lt;/a&gt;). Neste caso, você deve hospedar as suas fotos ou vídeos em uma conta do Google regular.</msg>
+  <msg name="ERROR_TAB_BULK_SUCCEEDED">Upload em Massa Sucedido!</msg>
+  <msg name="ERROR_TAB_PRIVATE_ABLUM">Album Picasa privada!</msg>
+  <msg name="ERROR_TAB_YT_VIDEO">Vídeo do YouTube privada!</msg>
+  <msg name="ERROR_TITLE_PWA_ALBUM">Desculpe! Este é um álbum do Picasa privada</msg>
+  <msg name="ERROR_TITLE_PWA_PHOTO">Desculpe! Esta foto está em um álbum do Picasa privada</msg>
+  <msg name="ERROR_TITLE_PWA_UPLOAD_ALBUM">Carregar conseguiu, mas o álbum do Picasa é privado!</msg>
+  <msg name="ERROR_TITLE_PWA_VIDEO">Desculpe! Este vídeo é em um álbum do Picasa privada</msg>
+  <msg name="ERROR_TITLE_YT_VIDEO">Desculpe! Este vídeo do YouTube é privado </msg>
+  <msg name="ERROR_UPLOAD_PRIVATE_PICASA_PRIVATE"> &lt;p&gt;O álbum que você carregou seus itens para é privado. Antes que você pode inserir fotos ou vídeos a partir deste álbum, você tem que fazer este álbum "Público na internet" ou "qualquer um, Limitado com um link" (&lt;a target="_blank" href="
+      http://support.google.com/picasa/bin/answer.py?answer=39551
+      "&gt;mais informações&lt;/a&gt;).&lt;/p&gt;
+      &lt;p&gt;Clique no link para o seu álbum abaixo para visitar este álbum no Picasa e altere as opções de compartilhamento. Aqui estão algumas &lt;a target="_blank" href="http://support.google.com/picasa/bin/answer.py?answer=113516"&gt;instruções sobre como fazê-lo&lt;/a&gt;.
+      &lt;/p&gt;</msg>
+  <msg name="ERROR_YOUTUBE_PRIVATE">&lt;p&gt;O vídeo selecionado a partir do YouTube é privado...&lt;p&gt;</msg>
+  <msg name="ICON">ícone</msg>
+  <msg name="ORIGINAL">Original </msg>
+  <msg name="PICASA_ERROR_OLD">
+&lt;h2&gt;Sorry! We can't load this photo/video/slideshow from Picasa&lt;/h2&gt;
+&lt;p&gt;The item you selected from Picasa is probably in a
+&lt;a target="_blank" href="http://support.google.com/picasa/bin/
+answer.py?answer=39551"&gt;"private" or "limited" album&lt;/a&gt;,
+which means you can't embed it on another website!&lt;/p&gt;
+&lt;p&gt;Você tem que fazer este álbum "Público na internet" ou
+"Limitado, qualquer pessoa com um link" (&lt;a target="_blank" href="
+http://support.google.com/picasa/bin/answer.py?answer=39551
+"&gt;mais informações&lt;/a&gt;) OU também copiar a foto / vídeo em um
+novo álbum / diferente que é "público" ou "limitada"
+(&lt;a target="_blank" href="http://support.google.com/picasa/bin/
+answer.py?answer=62703"&gt;more info&lt;/a&gt;). Abaixo está um link para seu álbum, caso você queira alterar as permissões ou copiar / mover o item para outro álbum.&lt;/p&gt;
+&lt;p&gt;Se você tiver uma conta do Google Apps, pode não ser possível para
+que você compartilhe seus álbuns como "Público" ou "Limitado, com link"
+(&lt;a target="_blank" href="http://support.google.com/picasa/bin/
+answer.py?answer=187194"&gt;mais informações&lt;/a&gt;). Neste caso, você deve hospedar as suas fotos ou vídeos em uma conta do Google regular.&lt;p&gt;</msg>
+  <msg name="PICASA_ICON_ERROR">
+&lt;h2&gt;Desculpe! Eu não posso fazer um ícone de um vídeo&lt;/h2&gt;
+&lt;p&gt;O item selecionado a partir do Picasa não é uma foto. Eu só posso fazer
+ícones fora das fotos. Por favor, selecione uma foto de seus Álbuns do Picasa&lt;p&gt;</msg>
+  <msg name="SEARCH_PHOTOS_VIDEOS">De busca de vídeo e fotos</msg>
+  <msg name="SUCCEED_TITLE_PWA_UPLOAD_ALBUM">Envie sucesso! </msg>
+  <msg name="SUCCEED_UPLOAD_PICASA_PRIVATE">&lt;p&gt;Os itens foram enviados com sucesso! Para incorporar um de seus itens clique no botão "Escolher ícone do mapa" ou "Suas fotos, vídeos e álbuns" botão acima, selecione o álbum e escolher uma foto ou vídeo!&lt;/p&gt;</msg>
+  <msg name="SUCCESS_LINK_PICASA_ALBUM">Link para o seu álbum do Picasa:</msg>
+  <msg name="TITLE_ALBUM">Album Picasa:</msg>
+  <msg name="TITLE_MAPS">mapa de Localização</msg>
+  <msg name="TITLE_PHOTO_FROM_ALBUM">Foto do Álbum Picasa:</msg>
+  <msg name="TITLE_SEARCH">De Google Search</msg>
+  <msg name="TITLE_VIDEO_FROM_ALBUM">Vídeo do Álbum Picasa:</msg>
+  <msg name="TITLE_YOUTUBE">Vídeo do YouTube</msg>
+  <msg name="GADGET_TITLE">Selecionador de Mídiae e Mapa </msg>
+</messagebundle>
