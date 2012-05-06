@@ -1,5 +1,4 @@
 <messagebundle>
-  <msg name="PICKER_LANG">pt-BR</msg>
   <msg name="ADDRESS">Endereço:</msg>
   <msg name="BUTTON_BULK_UPLOAD">Upload em massa</msg>
   <msg name="BUTTON_HTML">Ajuda</msg>
@@ -41,7 +40,7 @@
   <msg name="LINK_YT">Link para vídeo do YouTube:</msg>
   <msg name="LOC_LAT_LON">Latitude e Longitude do Local</msg>
   <msg name="LOCATION_NAME">Nome do Local:</msg>
-  <msg name="PICKER_LANG">pt</msg>
+  <msg name="PICKER_LANG">pt-BR</msg>
   <msg name="PWA_SLIDESHOW_CODE">Código para incorporar slideshow:</msg>
   <msg name="TAB_LIMITED_WARNING">Informações sobre álbuns restritos</msg>
   <msg name="TAB_USAGE">Como utilizar esta ferramenta</msg>

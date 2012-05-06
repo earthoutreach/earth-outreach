@@ -66,7 +66,7 @@ LINK_PICASA_VIDEO,y,Link para vídeo do Picasa:,Link to video on Picasa:
 LINK_YT,y,Link para vídeo do YouTube:,Link to video on YouTube:
 LOC_LAT_LON,y,Latitude e Longitude do Local,Latitude & longitude
 LOCATION_NAME,y,Nome do Local:,Location Name:
-PICKER_LANG,y,pt,en
+PICKER_LANG,y,pt-BR,en
 PWA_SLIDESHOW_CODE,y,Código para incorporar slideshow:,Slideshow embed code:
 TAB_LIMITED_WARNING,y,Informações sobre álbuns restritos,About limited albums
 TAB_USAGE,y,Como utilizar esta ferramenta,How to use this tool

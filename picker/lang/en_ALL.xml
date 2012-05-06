@@ -1,5 +1,4 @@
 <messagebundle>
-  <msg name="PICKER_LANG">en</msg>
   <msg name="ADDRESS">Address:</msg>
   <msg name="BUTTON_BULK_UPLOAD">Bulk Upload</msg>
   <msg name="BUTTON_HTML">help</msg>
