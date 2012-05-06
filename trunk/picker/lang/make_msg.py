@@ -88,7 +88,7 @@ for row in unicode_csv_reader(open('translations.csv', 'rb'), delimiter=','):
   
  
 f_out_en = open('en_ALL.xml', 'w')
-f_out_pt = open('pt_ALL.xml', 'w')
+f_out_pt = open('pt_BR.xml', 'w')
 
 f_out_en.write(etree.tostring(en, encoding='UTF-8', pretty_print=True))
 f_out_pt.write(etree.tostring(pt, encoding='UTF-8', pretty_print=True))

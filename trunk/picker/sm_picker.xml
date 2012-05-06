@@ -10,7 +10,7 @@
       width="900"
       height="500">
     <Locale messages="http://earth-outreach.googlecode.com/svn/trunk/picker/lang/en_ALL.xml"/>
-    <Locale lang="pt-BR" messages="http://earth-outreach.googlecode.com/svn/trunk/picker/lang/pt_ALL.xml"/>
+    <Locale lang="pt-BR" messages="http://earth-outreach.googlecode.com/svn/trunk/picker/lang/pt_BR.xml"/>
 
     <Require feature="dynamic-height"/>
     <Require feature="minimessage"/>
