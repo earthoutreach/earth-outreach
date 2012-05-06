@@ -1332,5 +1332,6 @@ Embed Option: Autoplay">
       <div id="picker_launcher" style="overflow: auto;"></div>
       <div id="results" style="overflow: auto;"></div>
     </div>
+    <div>__MSG_PICKER_LANG__</div>
 ]]></Content>
 </Module>
