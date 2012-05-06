@@ -75,7 +75,7 @@ XML = objectify.ElementMaker(annotate=False)
 en = XML.messagebundle();
 pt = XML.messagebundle();
 en.append(XML.msg('en', name = 'PICKER_LANG'))
-pt.append(XML.msg('pt', name = 'PICKER_LANG'))
+pt.append(XML.msg('pt-BR', name = 'PICKER_LANG'))
 
 i = 0
 for row in unicode_csv_reader(open('translations.csv', 'rb'), delimiter=','):
