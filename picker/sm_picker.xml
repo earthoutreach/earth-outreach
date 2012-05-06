@@ -7,7 +7,7 @@
       author_email="alchemist@google.com"
       author_location="Mountain View, CA USA"
       author_affiliation="Google Inc"
-      width="500"
+      width="900"
       height="500">
     <Locale messages="http://earth-outreach.googlecode.com/svn/trunk/picker/lang/en_ALL.xml"/>
     <Locale lang="pt-BR" messages="http://earth-outreach.googlecode.com/svn/trunk/picker/lang/pt_ALL.xml"/>
