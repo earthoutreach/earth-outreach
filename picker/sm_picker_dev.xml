@@ -540,7 +540,7 @@ Embed Option: Autoplay">
           title: ''
         }
         return '<' + 'script src="http://www.gmodules.com/ig/ifr?' +
-            getUrlParametersFromArray(url_params, '&amp;') + '"></' + 'script>';
+            getUrlParametersFromArray(url_params, '&amp;') + '"></' + ' ';
       }
 
 
@@ -723,8 +723,9 @@ Embed Option: Autoplay">
         for (var i=0; i < SLIDESHOW_RES.length; i++) {
           var size = SLIDESHOW_RES[i];
           var tab = new TabData(size.width + 'x' + size.height);
-          tab.setPreview(makeFlashEmbedCode(
-              PWA_SLIDESHOW_PLAYER, size.width, size.height, flash_attr));
+          var preview_code = makeFlashEmbedCode(
+              PWA_SLIDESHOW_PLAYER, size.width, size.height, flash_attr);
+          tab.setPreview(preview_code);
           tab.addField(PREFS.getMsg('PWA_SLIDESHOW_CODE'),
               preview_code.clone().wrap('<div>').parent().html(),
               'input',
@@ -1325,7 +1326,7 @@ Embed Option: Autoplay">
   }
 
     </script>
-    <h4>dev10</h4>
+    <!-- __MSG_PICKER_LANG__ -->
     <div id="media_picker" style="overflow: auto;">
       <div id="picker_launcher" style="overflow: auto;"></div>
       <div id="results" style="overflow: auto;"></div>
