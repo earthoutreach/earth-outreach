@@ -157,4 +157,5 @@ icons out of photos. Please select a photo from your Picasa Albums&lt;p&gt;</msg
   <msg name="TITLE_SEARCH">From Google Search</msg>
   <msg name="TITLE_VIDEO_FROM_ALBUM">Video from Picasa Album:</msg>
   <msg name="TITLE_YOUTUBE">Video from YouTube</msg>
+  <msg name="GADGET_TITLE">Map and Media Picker</msg>
 </messagebundle>
