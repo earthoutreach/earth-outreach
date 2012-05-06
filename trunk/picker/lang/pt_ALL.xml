@@ -1,7 +1,7 @@
 <messagebundle>
   <msg name="PICKER_LANG">pt</msg>
   <msg name="ADDRESS">Endereço:</msg>
-  <msg name="BUTTON_BULK_UPLOAD">Bulk Upload</msg>
+  <msg name="BUTTON_BULK_UPLOAD">Upload em massa</msg>
   <msg name="BUTTON_HTML">Ajuda</msg>
   <msg name="BUTTON_MAP_LOC">Mapeie um local</msg>
   <msg name="BUTTON_SEARCH">Pesquisa de Vídeos e Fotos</msg>
