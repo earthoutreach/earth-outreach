@@ -476,7 +476,7 @@ Embed Option: Autoplay">
 
             logToConsole(yt_embed_url);
 
-            var preview_code = makeFlashEmbedCode('youtube',
+            var preview_code = makeFlashEmbedCode('sm_youtube',
                 yt_embed_url, size.width, embed_height, flash_attr);
             var tab_name = (audio_only) ?
                 PREFS.getMsg('AUDIO_ONLY') : size.width + 'x' + size.height;
@@ -570,7 +570,7 @@ Embed Option: Autoplay">
         };
         flash_attr.flashvars = getUrlParametersFromArray(flashvars, '&');
         return makeFlashEmbedCode(
-            'pwa_video', PWA_PLAYER, width, height, flash_attr);
+            'sm_pwa_video', PWA_PLAYER, width, height, flash_attr);
       }
 
 
@@ -726,7 +726,7 @@ Embed Option: Autoplay">
         for (var i=0; i < SLIDESHOW_RES.length; i++) {
           var size = SLIDESHOW_RES[i];
           var tab = new TabData(size.width + 'x' + size.height);
-          var preview_code = makeFlashEmbedCode('slideshow',
+          var preview_code = makeFlashEmbedCode('sm_slideshow',
               PWA_SLIDESHOW_PLAYER, size.width, size.height, flash_attr);
           tab.setPreview(preview_code);
           tab.addField(PREFS.getMsg('PWA_SLIDESHOW_CODE'),
