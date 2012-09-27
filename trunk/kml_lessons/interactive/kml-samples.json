@@ -220,19 +220,19 @@
       "name": "KML Editing - Advanced",
       "children": [
         {
-          "source": "./advanced/lesson_09",
+          "source": "./advanced/lesson_9",
           "name": "Lesson 9. Extended Data",
           "children": [
             {
-              "source": "./advanced/lesson_09/lesson_09_extended_data_datavalue.kml",
+              "source": "./advanced/lesson_9/lesson_09_extended_data_datavalue.kml",
               "name": "Sample: Extended Data (untyped)"
             },
             {
-              "source": "./advanced/lesson_09/lesson_09_extended_data_schema.kml",
+              "source": "./advanced/lesson_9/lesson_09_extended_data_schema.kml",
               "name": "Sample: Extended Data (typed)"
             },
             {
-              "source": "./advanced/lesson_09/lesson_09_extended_data_ex_01.kml",
+              "source": "./advanced/lesson_9/lesson_09_extended_data_ex_01.kml",
               "name": "Exercise: Extended Data"
             }
           ]
