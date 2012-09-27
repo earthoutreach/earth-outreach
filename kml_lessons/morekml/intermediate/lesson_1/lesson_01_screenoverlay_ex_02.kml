@@ -3,7 +3,7 @@
   <ScreenOverlay>
     <name>Put your logo in the lower left</name>
     <Icon>
-      <!-- You can use this URL, or find your own... http://server/logo.png -->
+      <!-- You can use this URL, or find your own... http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/intermediate/lesson_1/logo.png -->
       <href></href>
     </Icon>
     <overlayXY x="0" y="0" xunits="fraction" yunits="fraction"/>

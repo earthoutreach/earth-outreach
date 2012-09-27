@@ -8,7 +8,7 @@
     <GroundOverlay>
       <name>WMS 45</name>
       <Icon>
-        <href>http://server/wms_45.jpg</href>
+        <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/wms_45.jpg</href>
       </Icon>
       <LatLonBox>
         <north>50</north>
@@ -25,7 +25,7 @@
     <GroundOverlay>
       <name>WMS 46</name>
       <Icon>
-        <href>http://server/wms_46.jpg</href>
+        <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/wms_46.jpg</href>
       </Icon>
       <LatLonBox>
         <north>50</north>
@@ -42,7 +42,7 @@
     <GroundOverlay>
       <name>WMS 47</name>
       <Icon>
-        <href>http://server/wms_47.jpg</href>
+        <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/wms_47.jpg</href>
       </Icon>
       <LatLonBox>
         <north>50</north>
@@ -59,7 +59,7 @@
     <GroundOverlay>
       <name>WMS 48</name>
       <Icon>
-        <href>http://server/wms_48.jpg</href>
+        <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/wms_48.jpg</href>
       </Icon>
       <LatLonBox>
         <north>50</north>
@@ -76,7 +76,7 @@
     <GroundOverlay>
       <name>WMS 49</name>
       <Icon>
-        <href>http://server/wms_49.jpg</href>
+        <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/wms_49.jpg</href>
       </Icon>
       <LatLonBox>
         <north>50</north>

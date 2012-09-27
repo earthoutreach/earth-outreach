@@ -10,7 +10,7 @@
       
       <html>
         <body>
-          <img src="http://server/02_unicorn.gif" width="200" />
+          <img src="http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/intermediate/lesson_2/unicorn.gif" width="200" />
           <h3>I love Unicorns!!</h3>
           <p>Here's the name of my placemark: $[name]</p>
           <p>Here's the description of my placemark: $[description]</p>
