@@ -74,32 +74,32 @@
           "children": [
             {
               "source": "./intermediate/lesson_1/lesson_01_screenoverlay_01_ll.kml",
-              "name": "Sample: Lower left ScreenOverlay",
+              "name": "Lower left ScreenOverlay",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_1/lesson_01_screenoverlay_02_c.kml",
-              "name": "Sample: Centered ScreenOverlay",
+              "name": "Centered ScreenOverlay",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_1/lesson_01_screenoverlay_03_ur.kml",
-              "name": "Sample: Upper right ScreenOverlay",
+              "name": "Upper right ScreenOverlay",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_01.kml",
-              "name": "Exercise: Create crosshairs",
+              "name": "Ex: Create crosshairs",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_02.kml",
-              "name": "Exercise: Upper right ScreenOverlay",
+              "name": "Ex: Upper right ScreenOverlay",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_03.kml",
-              "name": "Exercise: Upper right ScreenOverlay",
+              "name": "Ex: Upper right ScreenOverlay",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             }
           ]
@@ -110,27 +110,27 @@
           "children": [
             {
               "source": "./intermediate/lesson_2/lesson_02_styles_01_complete.kml",
-              "name": "Sample: Lots of styling options",
+              "name": "Lots of styling options",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_2/lesson_02_styles_02_balloon.kml",
-              "name": "Sample: Balloon Style",
+              "name": "Balloon Style",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_2/lesson_02_styles_ex_01.kml",
-              "name": "Exercise: Assign styles",
+              "name": "Ex: Assign styles",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_2/lesson_02_styles_ex_02.kml",
-              "name": "Exercise: Create an HTML template",
+              "name": "Ex: Create an HTML template",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_2/lesson_02_styles_ex_03.kml",
-              "name": "Exercise: Point, Line and Polygon styles",
+              "name": "Ex: Point, Line and Polygon styles",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             }
           ]
@@ -141,17 +141,17 @@
           "children": [
             {
               "source": "./intermediate/lesson_3/lesson_03_styles_01_stylemap.kml",
-              "name": "Sample: Simple StyleMap",
+              "name": "Simple StyleMap",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_3/lesson_03_styles_01_ex_01.kml",
-              "name": "Exercise: Create a simple highlight Style",
+              "name": "Ex: Create a simple highlight Style",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_3/lesson_03_styles_01_ex_02.kml",
-              "name": "Exercise: Create a fancy highlight Style",
+              "name": "Ex: Create a fancy highlight Style",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             }
           ]
@@ -162,27 +162,27 @@
           "children": [
             {
               "source": "./intermediate/lesson_4/lesson_04_time_01_timestamp.kml",
-              "name": "Sample: Simple Time Stamp",
+              "name": "Simple Time Stamp",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_4/lesson_04_time_02_timespan.kml",
-              "name": "Sample: Simple Time Span",
+              "name": "Simple Time Span",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_4/lesson_04_time_03_lookat.kml",
-              "name": "Sample: Simple View Time Span",
+              "name": "Simple View Time Span",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_4/lesson_04_time_ex_01.kml",
-              "name": "Exercise: Create a Time Stamp & Span",
+              "name": "Ex: Create a Time Stamp & Span",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_4/lesson_04_time_ex_02.kml",
-              "name": "Exercise: Create an animated hurrican overlay",
+              "name": "Ex: Create an animated hurrican overlay",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
@@ -198,12 +198,12 @@
           "children": [
             {
               "source": "./intermediate/lesson_5/lesson_05_kmz_01_hurricane.kml",
-              "name": "Sample: Simple Time Stamp",
+              "name": "Simple Time Stamp",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
               "source": "./intermediate/lesson_5/lesson_05_kmz_ex_01.kml",
-              "name": "Exercise: Change the Icon href to the KMZ path",
+              "name": "Ex: Change the Icon href to the KMZ path",
               //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
             },
             {
@@ -225,27 +225,27 @@
           "children": [
             {
               "source": "./advanced/lesson_6/lesson_06_tours_01_lookat.kml",
-              "name": "Sample: Lookat"
+              "name": "Lookat"
             },
             {
               "source": "./advanced/lesson_6/lesson_06_tours_02_camera.kml",
-              "name": "Sample: Camera"
+              "name": "Camera"
             },
             {
               "source": "./advanced/lesson_6/lesson_06_tours_03_historical.kml",
-              "name": "Sample: Historical Imagery"
+              "name": "Historical Imagery"
             },
             {
               "source": "./advanced/lesson_6/lesson_06_tours_04_streetview.kml",
-              "name": "Sample: Street View"
+              "name": "Street View"
             },           
             {
               "source": "./advanced/lesson_6/Touring.Bounce_flyToMode.kml",
-              "name": "Sample: Bounce Tour"
+              "name": "Bounce Tour"
             },
             {
               "source": "./advanced/lesson_6/Touring.Smooth_flyToMode.kml",
-              "name": "Sample: Smooth Tour"
+              "name": "Smooth Tour"
             },
             {
               "source": "./advanced/lesson_6/Touring.Pause_Tour_Primitive.kml",
@@ -257,19 +257,19 @@
             },
             {
               "source": "./advanced/lesson_6/lesson_06_tours_ex_01.kml",
-              "name": "Exercise: Create a tour 1"
+              "name": "Ex: Create a tour 1"
             },
             {
               "source": "./advanced/lesson_6/lesson_06_tours_ex_02.kml",
-              "name": "Exercise: Create a tour 2"
+              "name": "Ex: Create a tour 2"
             },
             {
               "source": "./advanced/lesson_6/lesson_06_tours_ex_03.kml",
-              "name": "Exercise: Create a tour 3"
+              "name": "Ex: Create a tour 3"
             },
             {
               "source": "./advanced/lesson_6/lesson_06_tours_ex_04.kml",
-              "name": "Exercise: Create a tour 4"
+              "name": "Ex: Create a tour 4"
             }
           ]
         },{
@@ -278,35 +278,35 @@
           "children": [
             {
               "source": "./advanced/lesson_7/lesson_07_animations_01.kml",
-              "name": "Sample: Tour to pop a balloon"
+              "name": "Tour to pop a balloon"
             },
             {
               "source": "./advanced/lesson_7/lesson_07_animations_02.kml",
-              "name": "Sample: Tour to play with styles"
+              "name": "Tour to play with styles"
             },
             {
               "source": "./advanced/lesson_7/Animated_Updates.kml",
-              "name": "Sample: Animated Update"
+              "name": "Animated Update"
             },
             {
               "source": "./advanced/lesson_7/Complete_Demo.kml",
-              "name": "Sample: Complete Tour"
+              "name": "Complete Tour"
             },
             {
               "source": "./advanced/lesson_7/lesson_07_ex_01.kml",
-              "name": "Exercise: Create a tour 1"
+              "name": "Ex: Create a tour 1"
             },
             {
               "source": "./advanced/lesson_7/lesson_07_ex_02.kml",
-              "name": "Exercise: Create a tour 2"
+              "name": "Ex: Create a tour 2"
             },
             {
               "source": "./advanced/lesson_7/lesson_07_ex_03.kml",
-              "name": "Exercise: Create a tour 3"
+              "name": "Ex: Create a tour 3"
             },
             {
               "source": "./advanced/lesson_7/lesson_07_ex_04.kml",
-              "name": "Exercise: Create a tour 4"
+              "name": "Ex: Create a tour 4"
             }
           ]
         },
@@ -316,15 +316,15 @@
           "children": [
             {
               "source": "./advanced/lesson_9/lesson_09_extended_data_datavalue.kml",
-              "name": "Sample: Extended Data (untyped)"
+              "name": "Extended Data (untyped)"
             },
             {
               "source": "./advanced/lesson_9/lesson_09_extended_data_schema.kml",
-              "name": "Sample: Extended Data (typed)"
+              "name": "Extended Data (typed)"
             },
             {
               "source": "./advanced/lesson_9/lesson_09_extended_data_ex_01.kml",
-              "name": "Exercise: Extended Data"
+              "name": "Ex: Extended Data"
             }
           ]
         },
@@ -334,11 +334,11 @@
           "children": [
             {
               "source": "./advanced/lesson_11/lesson_11_regions_polygon_fade.kml",
-              "name": "Sample: Simple Region"
+              "name": "Simple Region"
             },
             {
               "source": "./advanced/lesson_11/lesson_11_regions_ex_01.kml",
-              "name": "Exercise: Make your own Region"
+              "name": "Ex: Make your own Region"
             }
           ]
         },
@@ -348,15 +348,15 @@
           "children": [
             {
               "source": "./advanced/lesson_12/lesson_12_gps_01.kml",
-              "name": "Sample: GPS Data (ordered)"
+              "name": "GPS Data (ordered)"
             },
             {
               "source": "./advanced/lesson_12/lesson_12_gps_02.kml",
-              "name": "Sample: GPS Data (sorted)"
+              "name": "GPS Data (sorted)"
             },
             {
               "source": "./advanced/lesson_12/lesson_12_gps_ex_01.kml",
-              "name": "Exercise: Make your own GPS data"
+              "name": "Ex: Make your own GPS data"
             }
           ]
         }
