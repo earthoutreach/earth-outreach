@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Placemark>
+    <name>Forest Hill - Street View</name>
+    <open>1</open>
+    <LookAt>
+      <gx:ViewerOptions>
+        <gx:option enabled="0" name="historicalimagery"/>
+        <gx:option enabled="0" name="sunlight"/>
+        <gx:option enabled="1" name="streetview"/>
+      </gx:ViewerOptions>
+      <longitude>-122.4635705138669</longitude>
+      <latitude>37.74376860622052</latitude>
+      <altitude>0</altitude>
+      <heading>23.0081840588661</heading>
+      <tilt>87.71396801749266</tilt>
+      <range>25.1285342158879</range>
+      <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+    </LookAt>
+    <Point>
+      <coordinates>-122.4636,37.7437,0</coordinates>
+    </Point>
+  </Placemark>
+</kml>

@@ -220,6 +220,48 @@
       "name": "KML Editing - Advanced",
       "children": [
         {
+          "source": "./advanced/lesson_6",
+          "name": "Lesson 6. Tours - Flight",
+          "children": [
+            {
+              "source": "./advanced/lesson_6/lesson_06_tours_01_lookat.kml",
+              "name": "Sample: Lookat"
+            },
+            {
+              "source": "./advanced/lesson_6/lesson_06_tours_02_camera.kml",
+              "name": "Sample: Camera"
+            },
+            {
+              "source": "./advanced/lesson_6/lesson_06_tours_03_historical.kml",
+              "name": "Sample: Historical Imagery"
+            },
+            {
+              "source": "./advanced/lesson_6/lesson_06_tours_04_streetview.kml",
+              "name": "Sample: Street View"
+            },           
+            {
+              "source": "./advanced/lesson_6/Touring.Bounce_flyToMode.kml",
+              "name": "Sample: Bounce Tour"
+            },
+            {
+              "source": "./advanced/lesson_6/Touring.Smooth_flyToMode.kml",
+              "name": "Sample: Smooth Tour"
+            },
+            {
+              "source": "./advanced/lesson_6/Touring.Pause_Tour_Primitive.kml",
+              "name": "Pause Tour Primitive"
+            },
+            {
+              "source": "./advanced/lesson_6/Touring.Wait_Tour_Primitive.kml",
+              "name": "Wait Tour Primitive"
+            },
+            {
+              "source": "./advanced/lesson_6/Touring.Sound_Cues.kml",
+              "name": "Sound Cues"
+            }
+          ]
+        },
+        {
           "source": "./advanced/lesson_9",
           "name": "Lesson 9. Extended Data",
           "children": [

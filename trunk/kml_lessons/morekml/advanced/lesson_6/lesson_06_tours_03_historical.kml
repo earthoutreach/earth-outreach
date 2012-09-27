@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Placemark>
+    <name>Forest Hill - Historical 1946</name>
+    <LookAt>
+      <gx:TimeStamp>
+        <when>1946-07-26</when>
+      </gx:TimeStamp>
+      <gx:ViewerOptions>
+        <gx:option enabled="1" name="historicalimagery"/>
+        <gx:option enabled="0" name="sunlight"/>
+        <gx:option enabled="0" name="streetview"/>
+      </gx:ViewerOptions>
+      <longitude>-122.4636</longitude>
+      <latitude>37.7437</latitude>
+      <altitude>0</altitude>
+      <heading>0</heading>
+      <tilt>0</tilt>
+      <range>1700</range>
+      <altitudeMode>relativeToGround</altitudeMode>
+    </LookAt>
+    <Point>
+      <coordinates>-122.4636,37.7437,0</coordinates>
+    </Point>
+  </Placemark>
+</kml>
