@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Placemark>
+		<name>Simple extruded line</name>
+		<LineString>
+			<extrude>1</extrude>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<coordinates>
+				-122.08533,37.42361,20
+        -122.08473,37.42403,20
+        -122.08467,37.42447,20
+        -122.08488,37.42477,20
+        -122.08535,37.42481,20
+        -122.08575,37.42534,20
+        -122.08541,37.42558,20
+        -122.08499,37.42560,20
+        -122.08450,37.42537,20
+        -122.08392,37.42500,20
+			</coordinates>
+		</LineString>
+	</Placemark>
+</kml>
