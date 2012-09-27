@@ -220,12 +220,34 @@
       "name": "KML Editing - Advanced",
       "children": [
         {
-          "source": "./Ground_Overlays",
-          "name": "Ground Overlays",
+          "source": "./advanced",
+          "name": "Lesson 9. Extended Data",
           "children": [
             {
-              "source": "./Ground_Overlays/Ground_Overlays.Large_Ground_Overlay.kml",
-              "name": "Large Ground Overlay"
+              "source": "./advanced/lesson_09/lesson_09_extended_data_datavalue.kml",
+              "name": "Sample: Extended Data (untyped)"
+            },
+            {
+              "source": "./advanced/lesson_09/lesson_09_extended_data_schema.kml",
+              "name": "Sample: Extended Data (typed)"
+            },
+            {
+              "source": "./advanced/lesson_09/lesson_09_extended_data_ex_01.kml",
+              "name": "Exercise: Extended Data"
+            }
+          ]
+        },
+        {
+          "source": "./advanced",
+          "name": "Lesson 9. Regions",
+          "children": [
+            {
+              "source": "./advanced/lesson_11/lesson_11_regions_polygon_fade.kml",
+              "name": "Sample: Simple Region"
+            },
+            {
+              "source": "./advanced/lesson_11/lesson_11_regions_ex_01.kml",
+              "name": "Exercise: Make your own Region"
             }
           ]
         }

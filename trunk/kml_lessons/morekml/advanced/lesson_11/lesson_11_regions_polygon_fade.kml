@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Placemark>
+    <name>Polygon with fade in/out</name>
+    <Style>
+      <PolyStyle>
+        <color>ffff8080</color>
+      </PolyStyle>
+    </Style>
+		<!-- Define region box -->
+    <Region>
+      <LatLonAltBox>
+        <north>-34.85</north>
+        <south>-34.97</south>
+        <east>138.64</east>
+        <west>138.56</west>
+      </LatLonAltBox>
+			<!-- Set on-screen-size of region box at max and min -->
+      <Lod>
+        <minLodPixels>128</minLodPixels>
+        <maxLodPixels>1024</maxLodPixels>
+        <minFadeExtent>64</minFadeExtent>
+        <maxFadeExtent>256</maxFadeExtent>
+      </Lod>
+    </Region>
+		<!-- Create polygon - in this case same size/shape as region box -->
+    <Polygon>
+      <outerBoundaryIs>
+        <LinearRing>
+          <coordinates>
+            138.64,-34.97 138.64,-34.85 138.56,-34.85 138.56,-34.97 138.64,-34.97
+          </coordinates>
+        </LinearRing>
+      </outerBoundaryIs>
+    </Polygon>
+  </Placemark>
+</kml>
