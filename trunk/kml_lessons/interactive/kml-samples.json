@@ -90,17 +90,17 @@
             {
               "source": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_01.kml",
               "name": "Ex: Create crosshairs",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              "descSource": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_01.kml.html",
             },
             {
               "source": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_02.kml",
               "name": "Ex: Upper right ScreenOverlay",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              "descSource": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_02.kml.html",
             },
             {
               "source": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_03.kml",
               "name": "Ex: Upper right ScreenOverlay",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              "descSource": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_03.kml.html",
             }
           ]
         },
@@ -116,22 +116,22 @@
             {
               "source": "./intermediate/lesson_2/lesson_02_styles_02_balloon.kml",
               "name": "Balloon Style",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              //"descSource": "./intermediate/lesson_2/lesson_02_styles_02_balloon.kml",
             },
             {
               "source": "./intermediate/lesson_2/lesson_02_styles_ex_01.kml",
               "name": "Ex: Assign styles",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              "descSource": "./intermediate/lesson_2/lesson_02_styles_ex_01.kml.html",
             },
             {
               "source": "./intermediate/lesson_2/lesson_02_styles_ex_02.kml",
               "name": "Ex: Create an HTML template",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              "descSource": "./intermediate/lesson_2/lesson_02_styles_ex_02.kml.html",
             },
             {
               "source": "./intermediate/lesson_2/lesson_02_styles_ex_03.kml",
               "name": "Ex: Point, Line and Polygon styles",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              "descSource": "./intermediate/lesson_2/lesson_02_styles_ex_03.kml.html",
             }
           ]
         },
@@ -147,12 +147,12 @@
             {
               "source": "./intermediate/lesson_3/lesson_03_styles_01_ex_01.kml",
               "name": "Ex: Create a simple highlight Style",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              "descSource": "./intermediate/lesson_3/lesson_03_styles_01_ex_01.kml.html",
             },
             {
               "source": "./intermediate/lesson_3/lesson_03_styles_01_ex_02.kml",
               "name": "Ex: Create a fancy highlight Style",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              "descSource": "./intermediate/lesson_3/lesson_03_styles_01_ex_02.kml.html",
             }
           ]
         },
@@ -178,12 +178,12 @@
             {
               "source": "./intermediate/lesson_4/lesson_04_time_ex_01.kml",
               "name": "Ex: Create a Time Stamp & Span",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              "descSource": "./intermediate/lesson_4/lesson_04_time_ex_01.kml.html",
             },
             {
               "source": "./intermediate/lesson_4/lesson_04_time_ex_02.kml",
               "name": "Ex: Create an animated hurrican overlay",
-              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+              "descSource": "./intermediate/lesson_4/lesson_04_time_ex_02.kml.html",
             },
             {
               "source": "./intermediate/lesson_4/lesson_04_time_ex_02_answer.kml",
