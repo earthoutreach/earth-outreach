@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Placemark>
+    <name>Make the point disappear</name>
+    <Style>
+      <PolyStyle>
+        <color>ffff8080</color>
+      </PolyStyle>
+    </Style>
+		<!-- Region box -->
+    <Region>
+      <LatLonAltBox>
+        <north>37.86</north>
+        <south>37.84</south>
+        <east>-122.44</east>
+        <west>-122.46</west>
+      </LatLonAltBox>
+			<!-- Set the max LOD so it disappears around  eye altitude = 10,000 ft (3000 m)-->
+      <Lod>
+        <maxLodPixels>????</maxLodPixels>
+      </Lod>
+    </Region>
+		<!-- Create polygon - in this case same size/shape as region box -->
+    <Point>
+      <coordinates>-122.45,37.85</coordinates>
+    </Point>
+  </Placemark>
+</kml>
