@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>Simple Timestamps</name>
+    <open>1</open>
+
+    <Placemark>
+      <name>In the year 1900</name>
+      <TimeStamp>
+        <when>1900</when>
+      </TimeStamp>
+      <Point>
+        <coordinates>-122.47,37.755,0</coordinates>
+      </Point> 
+    </Placemark>
+
+    <Placemark>
+      <name>In the year 2000</name>
+      <TimeStamp>
+        <when>2000</when>
+      </TimeStamp>
+      <Point>
+        <coordinates>-122.43,37.755,0</coordinates>
+      </Point> 
+    </Placemark>
+
+  </Document>
+</kml>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Placemark>
+    <name>Golden Gate Bridge (LookAt)</name>
+    <LookAt>
+      <longitude>-122.4784</longitude>
+      <latitude>37.8181</latitude>
+      <altitude>0</altitude>
+      <heading>90</heading>
+      <tilt>45</tilt>
+      <range>2500</range>
+      <altitudeMode>clampToGround</altitudeMode> 
+    </LookAt>
+    <Point>
+      <coordinates>-122.4784,37.8181,0</coordinates>
+    </Point>
+  </Placemark>
+</kml>

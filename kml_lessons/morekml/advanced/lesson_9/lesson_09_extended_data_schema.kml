@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>ExtendedData+SchemaData</name>
+    
+    <!-- Create a balloon template referring to the user-defined type -->
+    <Style id="trailhead-template-schema">
+      <BalloonStyle>
+        <text><![CDATA[<html><body>
+					<h2>$[TrailHeadType/TrailHeadName]</h2>
+          <p>The trail's $[TrailHeadType/TrailLength/displayName] is $[TrailHeadType/TrailLength] miles.</p>
+          <p>The trail's $[TrailHeadType/ElevationGain/displayName] is $[TrailHeadType/ElevationGain] meters.</p>
+          </body></html>]]></text>
+      </BalloonStyle>
+    </Style>
+    
+    <!-- Declare the type "TrailHeadType" with 3 fields -->
+    <Schema name="TrailHeadType" id="TrailHeadTypeId">
+      <SimpleField type="string" name="TrailHeadName">
+        <displayName><![CDATA[<b>Trail Head Name</b>]]></displayName>
+      </SimpleField>
+      <SimpleField type="double" name="TrailLength">
+        <displayName><![CDATA[<i>length in miles</i>]]></displayName>
+      </SimpleField>
+      <SimpleField type="int" name="ElevationGain">
+        <displayName><![CDATA[<i>change in altitude</i>]]></displayName>
+      </SimpleField>
+    </Schema>
+    
+    <!-- Create a Placemark extended with TrailHeadType fields -->
+    <Placemark>
+      <name>Easy trail</name>
+      <styleUrl>#trailhead-template-schema</styleUrl>
+      <ExtendedData>
+        <SchemaData schemaUrl="#TrailHeadTypeId">
+          <SimpleData name="TrailHeadName">Pi in the sky</SimpleData>
+          <SimpleData name="TrailLength">3.14159</SimpleData>
+          <SimpleData name="ElevationGain">10</SimpleData>
+        </SchemaData>
+      </ExtendedData>
+      <Point>
+        <coordinates>-122.000,37.001</coordinates>
+      </Point>
+    </Placemark>
+    
+  </Document>
+</kml>

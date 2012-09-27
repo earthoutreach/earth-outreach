@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <ScreenOverlay>
+    <name>Pirates! Left of GE controls</name>
+    <Icon>
+      <href>pirate.png</href>
+      <!-- from http://www.knifecave.com/fantasy/store/products/Master+Cutlery/Skull+Pirate+Ship+Wheel+with+(2)+Mini+Swords/DBNC60687.html -->
+    </Icon>
+    <overlayXY x="1" y="1" xunits="fraction" yunits="fraction"/>
+    <screenXY x="90" y="1" xunits="insetPixels" yunits="fraction"/>
+    <rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+    <size x="0" y="150" xunits="fraction" yunits="pixels"/>
+  </ScreenOverlay>
+</kml>

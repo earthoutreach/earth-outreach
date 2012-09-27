@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>ExtendedData+Data_value</name>
+    
+    <!-- Fill in the balloon template to pull in the Data values -->
+    <Style id="my_style_01">
+      <BalloonStyle>
+        <text><![CDATA[<html><body>
+					<h2>Site: </h2>
+          <p><b>Temp (deg C):</b> </p>
+          <p></b>pH: </b> </p>
+          </body></html>]]></text>
+      </BalloonStyle>
+    </Style>
+    
+    <!-- Create a Placemark with Extended Data fields -->
+    <Placemark>
+      <name>Water Sample 1</name>
+      <styleUrl>#my_style_01</styleUrl>
+      <ExtendedData>
+				<Data name="site_name">
+					<value>Lakeside North</value>
+				</Data>
+				<Data name="temperature_C">
+					<value>21</value>
+				</Data>
+				<Data name="measured_pH">
+					<value>7.2</value>
+				</Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>-119.987854,38.199968,0</coordinates>
+      </Point>
+    </Placemark>
+    
+  </Document>
+</kml>
