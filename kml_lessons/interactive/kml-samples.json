@@ -220,7 +220,7 @@
       "name": "KML Editing - Advanced",
       "children": [
         {
-          "source": "./advanced",
+          "source": "./advanced/lesson_09",
           "name": "Lesson 9. Extended Data",
           "children": [
             {
@@ -238,8 +238,8 @@
           ]
         },
         {
-          "source": "./advanced",
-          "name": "Lesson 9. Regions",
+          "source": "./advanced/lesson_11",
+          "name": "Lesson 11. Regions",
           "children": [
             {
               "source": "./advanced/lesson_11/lesson_11_regions_polygon_fade.kml",
