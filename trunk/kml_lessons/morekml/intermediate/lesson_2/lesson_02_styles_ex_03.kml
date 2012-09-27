@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>Style examples</name>
+    <open>1</open>
+    
+    <!--
+      Here's a near-complete list of the most commonly used styles options
+      for point, lines & polygons. Try playing with the values to change
+      the way your features look.
+
+      KML colors are in alpha, blue, green, red sequence, unlike HTML
+      colors which are red, blue, green. Here is a website that will
+      help you pick KML colors: http://www.zonums.com/gmaps/kml_color/
+      
+      Of you can color a polygon in Google Earth, and copy out the color
+      value from the KML source code.
+      
+    -->
+    
+    <Style id="basic_style">
+
+      <!-- IconStyle specifies the icon used for point placemarks -->
+      <IconStyle>
+        <color>ffffffff</color>
+        <scale>1</scale>
+        <heading>0</heading>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/homegardenbusiness.png</href>
+        </Icon>
+        <hotSpot x="0.5"  y="0.5" xunits="fraction" yunits="fraction" />        
+      </IconStyle>
+
+      <!-- LabelStyle specifies the color/scale for text labels for point placemarks -->
+      <LabelStyle>
+        <color>ffffffff</color>
+        <scale>1</scale>
+      </LabelStyle>
+
+      <!-- LineStyle specifies the line width/color for lines and polygon outlines. Also enables line labels -->
+      <LineStyle>
+        <color>ff00ffff</color>
+        <width>3</width>
+        <gx:labelVisibility>1</gx:labelVisibility>
+      </LineStyle>
+
+      <!-- PolyStyle specifies the color and outline/fill state of polygons -->
+      <PolyStyle>
+        <color>7dff0000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+
+      <!-- BalloonStyle specifies the background color and HTML template placemarks balloons -->
+      <BalloonStyle>
+        <bgColor>ffffffaa</bgColor>
+        <text>
+          <![CDATA[
+          <html>
+            <body>
+              <h3>$[name]</h3>
+              <p>$[description]</p>
+              <hr/>
+              <h3>Neato footer!!</h3>
+            </body>          
+          </html>
+        ]]></text>
+      </BalloonStyle>
+
+      <!-- List style affects the way folders work -->
+      <ListStyle>
+        <listItemType>radioFolder</listItemType>
+      </ListStyle>
+
+    </Style>
+    
+    <Folder>
+      <name>Radio folder!</name>
+      <open>1</open>
+      <description>My contents have radio buttons</description>
+      <styleUrl>#basic_style</styleUrl>
+
+    <Placemark>
+      <name>Point placemark</name>
+      <description>I'm a point!</description>
+      <styleUrl>#basic_style</styleUrl>
+      <Point>
+        <coordinates>-85,39,0</coordinates>
+      </Point>    
+    </Placemark>
+
+    <Placemark>
+      <name>Line placemark</name>
+      <description>I'm a line!</description>
+      <styleUrl>#basic_style</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>-122.2,37.6,0 -70.5,42.9,0</coordinates>
+      </LineString>
+    </Placemark>
+
+    <Placemark>
+      <name>Polygon placemark</name>
+      <description>I'm a polygon!</description>
+      <styleUrl>#basic_style</styleUrl>
+      <Polygon>
+        <tessellate>1</tessellate>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-100,45,0 -107,36,0 -89,35,0 -100,45,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    </Folder>
+  </Document>
+</kml>
