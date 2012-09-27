@@ -3,7 +3,7 @@
   <ScreenOverlay>
     <name>Make some cross-hairs</name>
     <Icon>
-      <!-- You can use this URL, or find your own... http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/intermediate/lesson_1/crosshairs.png -->
+      <!-- You can use this URL, or find your own... http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/morekml/intermediate/lesson_1/crosshairs.png -->
       <href></href>
     </Icon>
     <overlayXY x="0" y="0" xunits="fraction" yunits="fraction"/>

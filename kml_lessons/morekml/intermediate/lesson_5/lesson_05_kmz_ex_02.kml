@@ -9,12 +9,12 @@
       <description><![CDATA[
         <html>
           <body>
-            <img src="http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/intermediate/lesson_5/wms_45.jpg" width="300" />
+            <img src="http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/morekml/intermediate/lesson_5/wms_45.jpg" width="300" />
           </body>
         </html>      
       ]]></description>
       <Icon>
-        <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/intermediate/lesson_5/wms_45.jpg</href>
+        <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/morekml/intermediate/lesson_5/wms_45.jpg</href>
       </Icon>
       <LatLonBox>
         <north>50</north>
