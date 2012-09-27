@@ -7,8 +7,7 @@
   <gx:Playlist>
 
     <gx:SoundCue>
-      <href>http://dev.keyhole.com/codesite/AJsBlues.mp3</href>
-      <!-- 23 second background track -->
+      <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/morekml/advanced/lesson_6/audio.mp3</href>
     </gx:SoundCue>
 
     <gx:FlyTo>

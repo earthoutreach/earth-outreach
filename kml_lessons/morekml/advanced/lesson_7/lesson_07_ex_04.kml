@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Hurricane Katrina</name>
+	<open>1</open>
+  
+  <Folder id="goodies">
+  </Folder>
+
+    <gx:Tour>
+      <name>Play me!</name>
+      <gx:Playlist>
+      
+        <!-- 
+          Make a tour that uses <Create> to add 3 placemark to the folder above.
+          
+          Fly to a view of all the placemarks.
+          
+          Then fly to each of the placemarks, opens the balloon, waits for 2 seconds
+          closes the balloon, waits 2 seconds, then flies to the next location.
+          
+          Fly to a view of all the placemarks.
+          
+          Delete each of the placemarks, one-by-one, with 2 second pauses between.
+          
+          Then create a Ground Overlay in the folder which starts with 0% opacity.
+          Then fade it in to 100% opacity.
+        -->
+        
+      </gx:Playlist>
+    </gx:Tour>
+    
+</Document>
+</kml>

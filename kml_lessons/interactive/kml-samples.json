@@ -252,12 +252,61 @@
               "name": "Pause Tour Primitive"
             },
             {
-              "source": "./advanced/lesson_6/Touring.Wait_Tour_Primitive.kml",
-              "name": "Wait Tour Primitive"
-            },
-            {
               "source": "./advanced/lesson_6/Touring.Sound_Cues.kml",
               "name": "Sound Cues"
+            },
+            {
+              "source": "./advanced/lesson_6/lesson_06_tours_ex_01.kml",
+              "name": "Exercise: Create a tour 1"
+            },
+            {
+              "source": "./advanced/lesson_6/lesson_06_tours_ex_02.kml",
+              "name": "Exercise: Create a tour 2"
+            },
+            {
+              "source": "./advanced/lesson_6/lesson_06_tours_ex_03.kml",
+              "name": "Exercise: Create a tour 3"
+            },
+            {
+              "source": "./advanced/lesson_6/lesson_06_tours_ex_04.kml",
+              "name": "Exercise: Create a tour 4"
+            }
+          ]
+        },{
+          "source": "./advanced/lesson_7",
+          "name": "Lesson 7. Tours - Animations",
+          "children": [
+            {
+              "source": "./advanced/lesson_7/lesson_07_animations_01.kml",
+              "name": "Sample: Tour to pop a balloon"
+            },
+            {
+              "source": "./advanced/lesson_7/lesson_07_animations_02.kml",
+              "name": "Sample: Tour to play with styles"
+            },
+            {
+              "source": "./advanced/lesson_7/Animated_Updates.kml",
+              "name": "Sample: Animated Update"
+            },
+            {
+              "source": "./advanced/lesson_7/Complete_Demo.kml",
+              "name": "Sample: Complete Tour"
+            },
+            {
+              "source": "./advanced/lesson_7/lesson_07_ex_01.kml",
+              "name": "Exercise: Create a tour 1"
+            },
+            {
+              "source": "./advanced/lesson_7/lesson_07_ex_02.kml",
+              "name": "Exercise: Create a tour 2"
+            },
+            {
+              "source": "./advanced/lesson_7/lesson_07_ex_03.kml",
+              "name": "Exercise: Create a tour 3"
+            },
+            {
+              "source": "./advanced/lesson_7/lesson_07_ex_04.kml",
+              "name": "Exercise: Create a tour 4"
             }
           ]
         },
@@ -290,6 +339,24 @@
             {
               "source": "./advanced/lesson_11/lesson_11_regions_ex_01.kml",
               "name": "Exercise: Make your own Region"
+            }
+          ]
+        },
+        {
+          "source": "./advanced/lesson_12",
+          "name": "Lesson 12. GPS data",
+          "children": [
+            {
+              "source": "./advanced/lesson_12/lesson_12_gps_01.kml",
+              "name": "Sample: GPS Data (ordered)"
+            },
+            {
+              "source": "./advanced/lesson_12/lesson_12_gps_02.kml",
+              "name": "Sample: GPS Data (sorted)"
+            },
+            {
+              "source": "./advanced/lesson_12/lesson_12_gps_ex_01.kml",
+              "name": "Exercise: Make your own GPS data"
             }
           ]
         }

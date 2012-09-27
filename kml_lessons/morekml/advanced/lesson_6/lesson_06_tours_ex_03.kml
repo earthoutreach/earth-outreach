@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>Make an audio tour!</name>
+    <open>1</open>
+    
+    <Placemark>
+      <name>Google</name>
+      <Point>
+        <coordinates>-122.0921870688621,37.42350754708366,0</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>San Franisco</name>
+      <Point>
+        <coordinates>-122.4506766507285,37.74683300189479,0</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>Farallon Islands</name>
+      <Point>
+        <coordinates>-123.002314296906,37.69882033233824,0</coordinates>
+      </Point>
+    </Placemark>
+        
+    <!--
+      Create a Tour that visits these three placemarks. Starting playing
+      this audio file after the first flight, then add a 10 second Wait
+      before continuing to the remaining two placemarks.
+    -->
+        
+    <gx:Tour>
+    <name>Visit these places with narration!</name>
+    
+    <gx:Playlist>      
+      <gx:FlyTo>
+        <gx:duration></gx:duration>
+        <!-- Where are you going to fly? -->
+      </gx:FlyTo>      
+    </gx:Playlist>
+  </gx:Tour>
+  
+  </Document>
+</kml>

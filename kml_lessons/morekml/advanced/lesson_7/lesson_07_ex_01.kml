@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+  xmlns:gx="http://www.google.com/kml/ext/2.2">
+
+  <Document>
+    <name>gx:AnimatedUpdate example</name>
+    <open>1</open>
+
+    <Placemark id="mountainpin1">
+      <name>New Zealand's Southern Alps</name>
+      <description>Sweet!!</description>
+      <Point>
+        <coordinates>170.144,-43.605,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <gx:Tour>
+      <name>Play me!</name>
+      <gx:Playlist>
+      
+        <!-- Fly to a view of the placemark above -->
+
+        <!-- Start playing this audio file: http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/morekml/advanced/lesson_6/audio.mp3 -->
+        
+        <!-- Pop the placemark's balloon with an animation -->
+        
+        <!-- Wait for 4 seconds -->
+        
+        <!-- Close the placemark's pop-up balloon -->
+        
+        <!-- Fly to a higher altitude view of the above placemark -->
+        
+      </gx:Playlist>
+    </gx:Tour>
+  </Document>
+</kml>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>Create a Tour looking at this placemark!</name>
+    <open>1</open>
+    
+    <Placemark>
+      <name>Google</name>
+      <Point>
+        <coordinates>-122.0921870688621,37.42350754708366,0</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>San Franisco</name>
+      <Point>
+        <coordinates>-122.4506766507285,37.74683300189479,0</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>Farallon Islands</name>
+      <Point>
+        <coordinates>-123.002314296906,37.69882033233824,0</coordinates>
+      </Point>
+    </Placemark>
+    
+    
+    <!--
+      Create a tour with 3 Lookat that meets the following requirements
+      for all of above placemarks.
+
+      - 5 seconds between views, using a bounce
+      - Looking at the coordinates of the above placemark
+      - Has a heading of 90 degrees (east)
+      - Has a tilt of 60 degrees
+      - Has a range of 2000 meters
+      
+      Then wait for 4 seconds...
+
+      Then create 3 Cameras that meet the following
+      requirements:
+      
+      - 10 seconds between views, using "smooth"
+      - The Camera should be exact 5000m above the placemarks
+      - Pick some interesting values for tilt, roll and heading
+
+    -->
+        
+    <gx:Tour>
+    <name>Visit these places!</name>
+    
+    <gx:Playlist>      
+      <gx:FlyTo>
+        <gx:duration></gx:duration>
+        <!-- Where are you going to fly? -->
+      </gx:FlyTo>      
+    </gx:Playlist>
+  </gx:Tour>
+  
+  </Document>
+</kml>
