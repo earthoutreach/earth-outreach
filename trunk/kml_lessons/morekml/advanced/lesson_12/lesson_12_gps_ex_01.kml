@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns="http://www.opengis.net/kml/2.2">
+  <Document id="root">
+    <name>GPS data - make your own!</name>
+    <open>1</open>
+    <!-- 
+      Create a Camera that flies to the start of your GPS data
+      
+      <Camera>
+        <gx:TimeSpan>
+          <begin></begin>
+          <end></end>
+        </gx:TimeSpan>
+        <longitude></longitude>
+        <latitude></latitude>
+        <altitude></altitude>
+        <heading></heading>
+        <tilt></tilt>
+        <roll></roll>
+        <gx:altitudeMode></gx:altitudeMode>
+      </Camera>
+    
+    -->
+    
+    <Style id="airplane">
+      <IconStyle>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href>
+        </Icon>
+        <hotSpot y="0" x="0.5" xunits="fraction" yunits="fraction"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>cc00ffff</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+
+    <Placemark id="pl">
+      <name>track</name>
+      <description>init</description>
+      <styleUrl>#airplane</styleUrl>
+
+      <gx:Track id="track_1">
+        <altitudeMode>absolute</altitudeMode>
+        
+        <!-- Make a flight path! -->
+        <when></when>
+        <gx:coord></gx:coord>
+        
+        <Model>
+          <Link>
+            <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/morekml/advanced/lesson_12/cessna.dae</href>
+          </Link>
+          <Orientation>
+            <heading>180</heading>
+          </Orientation>
+        </Model>
+      </gx:Track>
+    </Placemark>
+  </Document>
+</kml>

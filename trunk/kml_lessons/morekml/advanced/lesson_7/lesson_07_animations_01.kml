@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <Document>
+    <name>gx:AnimatedUpdate example</name>
+    <open>1</open>
+
+    <Placemark id="mountainpin1">
+      <name>New Zealand's Southern Alps</name>
+      <description>Hello there!!</description>
+      <styleUrl>#style0</styleUrl>
+      <Point>
+        <coordinates>170.144,-43.605,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <gx:Tour>
+      <name>Play me!</name>
+      <gx:Playlist>
+
+        <gx:FlyTo>
+          <gx:duration>4</gx:duration>
+          <Camera>
+            <longitude>170.157</longitude>
+            <latitude>-43.671</latitude>
+            <altitude>9700</altitude>
+            <heading>-6.333</heading>
+            <tilt>33.5</tilt>
+            <roll>0</roll>
+          </Camera>
+        </gx:FlyTo>
+
+        <gx:AnimatedUpdate>
+          <gx:duration>0</gx:duration>
+          <Update>
+            <targetHref/>
+            <Change>
+              <Placemark targetId="mountainpin1">
+                <gx:balloonVisibility>1</gx:balloonVisibility>
+              </Placemark>
+            </Change>
+          </Update>
+        </gx:AnimatedUpdate>        
+
+        <gx:Wait>
+          <gx:duration>10</gx:duration>
+        </gx:Wait>
+
+      </gx:Playlist>
+    </gx:Tour>
+  </Document>
+</kml>

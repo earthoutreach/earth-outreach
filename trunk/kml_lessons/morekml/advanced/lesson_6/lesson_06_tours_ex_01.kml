@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>Make a tour from these placemarks!</name>
+    <open>1</open>
+    
+    <Placemark>
+      <name>Google</name>
+      <LookAt>
+        <longitude>-122.0907142384836</longitude>
+        <latitude>37.42236906270594</latitude>
+        <altitude>0</altitude>
+        <heading>17.95675818075812</heading>
+        <tilt>20.28361801520478</tilt>
+        <range>1211.146179098014</range>
+        <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+      </LookAt>
+      <Point>
+        <coordinates>-122.0921870688621,37.42350754708366,0</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>San Franisco</name>
+      <LookAt>
+        <longitude>-122.4663285406311</longitude>
+        <latitude>37.74339790860078</latitude>
+        <altitude>0</altitude>
+        <heading>30.65964784753011</heading>
+        <tilt>44.03563684710959</tilt>
+        <range>16131.98698167752</range>
+        <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+      </LookAt>
+      <Point>
+        <coordinates>-122.4506766507285,37.74683300189479,0</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>Farallon Islands</name>
+      <LookAt>
+        <longitude>-123.0049566774989</longitude>
+        <latitude>37.69491299789716</latitude>
+        <altitude>0</altitude>
+        <heading>27.54941202850806</heading>
+        <tilt>37.52168586307376</tilt>
+        <range>2146.72461603533</range>
+        <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+      </LookAt>
+      <Point>
+        <coordinates>-123.002314296906,37.69882033233824,0</coordinates>
+      </Point>
+    </Placemark>
+    
+    <gx:Tour>
+    <name>Bounce tour example</name>
+    
+    <gx:Playlist>
+      
+      <gx:FlyTo>
+        <gx:duration>4.0</gx:duration>
+        <!-- Where are you going to go?? -->
+      </gx:FlyTo>
+      
+      <gx:FlyTo>
+        <gx:duration>4.0</gx:duration>
+        <!-- Where are you going to go?? -->
+      </gx:FlyTo>
+      
+      <gx:FlyTo>
+        <gx:duration>4.0</gx:duration>
+        <!-- Where are you going to go?? -->
+        
+      </gx:FlyTo>
+      
+    </gx:Playlist>
+  </gx:Tour>
+  
+  </Document>
+</kml>

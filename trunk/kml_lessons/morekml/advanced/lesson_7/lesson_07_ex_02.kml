@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Hurricane Katrina</name>
+	<open>1</open>
+  
+	<GroundOverlay>
+		<name>WMS 45</name>
+    <color>ffffffff</color>
+		<Icon>
+			<href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/morekml/intermediate/lesson_5/wms_45.jpg</href>
+		</Icon>
+		<LatLonBox>
+			<north>50</north>
+			<south>10</south>
+			<east>-60</east>
+			<west>-100</west>
+		</LatLonBox>
+	</GroundOverlay>
+
+    <gx:Tour>
+      <name>Play me!</name>
+      <gx:Playlist>
+      
+        <!-- Fly to a view of the ground overlay above -->
+
+        <!-- Create an animation that slowly fades this placemark to 0% opacity -->
+        
+      </gx:Playlist>
+    </gx:Tour>
+    
+</Document>
+</kml>

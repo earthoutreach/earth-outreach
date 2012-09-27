@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>Get creative!</name>
+    <open>1</open>
+        
+    <gx:Tour>
+    <name>Visit these places with narration!</name>
+    
+    <gx:Playlist> 
+        
+      <!--
+        Create a tour that turns on Historical imagery,
+        and flies to San Francisco and cycling through the
+        following dates: October 1946, June 1987 and today.      -->
+       
+    </gx:Playlist>
+  </gx:Tour>
+  
+  </Document>
+</kml>

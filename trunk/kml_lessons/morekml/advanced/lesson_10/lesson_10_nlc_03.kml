@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns="http://www.opengis.net/kml/2.2">
+  <NetworkLinkControl>
+    <cookie>foo</cookie>
+    <linkName>Update #1</linkName>
+    <Update>
+      <targetHref>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/morekml/advanced/lesson_10/lesson_10_nlc_02.kml</targetHref>
+      <Change>
+        <Placemark targetId="pl">
+          <name>Kenya Rocks!</name>
+        </Placemark>
+      </Change>
+    </Update>
+  </NetworkLinkControl>
+</kml>
