@@ -3,7 +3,7 @@
   <ScreenOverlay>
     <name>Create a centered, scaling photo</name>
     <Icon>
-      <!-- You can use this URL, or find your own... http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/intermediate/lesson_1/iguana.jpg -->
+      <!-- You can use this URL, or find your own... http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/morekml/intermediate/lesson_1/iguana.jpg -->
       <href></href>
     </Icon>
     <overlayXY x="0" y="0" xunits="fraction" yunits="fraction"/>

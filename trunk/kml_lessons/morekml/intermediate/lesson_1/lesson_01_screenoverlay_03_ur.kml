@@ -3,7 +3,7 @@
   <ScreenOverlay>
     <name>Pirates! Left of GE controls</name>
     <Icon>
-      <href>pirate.png</href>
+      <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/morekml/intermediate/lesson_1/pirate.png</href>
       <!-- from http://www.knifecave.com/fantasy/store/products/Master+Cutlery/Skull+Pirate+Ship+Wheel+with+(2)+Mini+Swords/DBNC60687.html -->
     </Icon>
     <overlayXY x="1" y="1" xunits="fraction" yunits="fraction"/>
