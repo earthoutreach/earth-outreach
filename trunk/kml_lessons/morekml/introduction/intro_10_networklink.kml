@@ -3,7 +3,7 @@
   <NetworkLink>
     <flyToView>1</flyToView>
     <Link>
-      <href>http://server/introduction/intro_04_simple_extruded_line.kml</href>
+      <href>http://earth-outreach.googlecode.com/svn/trunk/kml_lessons/introduction/intro_04_simple_extruded_line.kml</href>
     </Link>
   </NetworkLink>
 </kml>
