@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Placemark>
+		<name>Simple polygon</name>
+		<Polygon>
+			<extrude>1</extrude>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+          <!-- The first and last coordinates must be the same -->
+					<coordinates>
+						-122.09291,37.42483,50
+            -122.09368,37.42264,50
+            -122.09175,37.42299,50
+            -122.09052,37.42397,50
+            -122.09178,37.42454,50
+            -122.09291,37.42483,50 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</kml>

@@ -1,0 +1,237 @@
+{
+  "items": [
+    {
+      "source": "section:KML Editing - Introduction",
+      "name": "KML Editing - Introduction",
+      "children": [
+        {
+          "source": "./introduction",
+          "name": "Simple features",
+          "children": [
+            {
+              "source": "./introduction/intro_01_simple_pl.kml",
+              "name": "Placemark"
+            },
+            {
+              "source": "./introduction/intro_02_simple_extruded.kml",
+              "name": "Placemark (extruded)"
+            },
+            {
+              "source": "./introduction/intro_03_simple_line.kml",
+              "name": "Line"
+            },
+            {
+              "source": "./introduction/intro_04_simple_extruded_line.kml",
+              "name": "Line (extruded)"
+            },
+            {
+              "source": "./introduction/intro_05_simple_poly.kml",
+              "name": "Polygon"
+            },
+            {
+              "source": "./introduction/intro_06_simple_extruded_poly.kml",
+              "name": "Polygon (extruded)"
+            },
+            {
+              "source": "./introduction/intro_07_simple_groundoverlay.kml",
+              "name": "Ground Overlay"
+            },
+            {
+              "source": "./introduction/intro_08_lookat.kml",
+              "name": "LookAt"
+            },
+            {
+              "source": "./introduction/intro_09_camera.kml",
+              "name": "Camera"
+            },
+            {
+              "source": "./introduction/intro_10_networklink.kml",
+              "name": "NetworkLink"
+            },
+            {
+              "source": "./introduction/intro_11_style.kml",
+              "name": "Styles"
+            },
+            {
+              "source": "./introduction/intro_12_full_placemark.kml",
+              "name": "Default GE Placemark"
+            },
+            {
+              "source": "./introduction/intro_13_full_placemark_commented.kml",
+              "name": "Default GE Placemark (annotated)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "section:KML Editing - Intermediate",
+      "name": "KML Editing - Intermediate",
+      "children": [
+        {
+          "source": "./intermediate/lesson_1",
+          "name": "Lesson 1. Screen Overlays",
+          "children": [
+            {
+              "source": "./intermediate/lesson_1/lesson_01_screenoverlay_01_ll.kml",
+              "name": "Sample: Lower left ScreenOverlay",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_1/lesson_01_screenoverlay_02_c.kml",
+              "name": "Sample: Centered ScreenOverlay",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_1/lesson_01_screenoverlay_03_ur.kml",
+              "name": "Sample: Upper right ScreenOverlay",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_01.kml",
+              "name": "Exercise: Create crosshairs",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_02.kml",
+              "name": "Exercise: Upper right ScreenOverlay",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_1/lesson_01_screenoverlay_ex_03.kml",
+              "name": "Exercise: Upper right ScreenOverlay",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            }
+          ]
+        },
+        {
+          "source": "./intermediate/lesson_2",
+          "name": "Lesson 2. Basic Styles",
+          "children": [
+            {
+              "source": "./intermediate/lesson_2/lesson_02_styles_01_complete.kml",
+              "name": "Sample: Lots of styling options",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_2/lesson_02_styles_02_balloon.kml",
+              "name": "Sample: Balloon Style",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_2/lesson_02_styles_ex_01.kml",
+              "name": "Exercise: Assign styles",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_2/lesson_02_styles_ex_02.kml",
+              "name": "Exercise: Create an HTML template",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_2/lesson_02_styles_ex_03.kml",
+              "name": "Exercise: Point, Line and Polygon styles",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            }
+          ]
+        },
+        {
+          "source": "./intermediate/lesson_3",
+          "name": "Lesson 3. Highlight Styles",
+          "children": [
+            {
+              "source": "./intermediate/lesson_3/lesson_03_styles_01_stylemap.kml",
+              "name": "Sample: Simple StyleMap",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_3/lesson_03_styles_01_ex_01.kml",
+              "name": "Exercise: Create a simple highlight Style",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_3/lesson_03_styles_01_ex_02.kml",
+              "name": "Exercise: Create a fancy highlight Style",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            }
+          ]
+        },
+        {
+          "source": "./intermediate/lesson_4",
+          "name": "Lesson 4. Time Animation",
+          "children": [
+            {
+              "source": "./intermediate/lesson_4/lesson_04_time_01_timestamp.kml",
+              "name": "Sample: Simple Time Stamp",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_4/lesson_04_time_02_timespan.kml",
+              "name": "Sample: Simple Time Span",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_4/lesson_04_time_03_lookat.kml",
+              "name": "Sample: Simple View Time Span",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_4/lesson_04_time_ex_01.kml",
+              "name": "Exercise: Create a Time Stamp & Span",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_4/lesson_04_time_ex_02.kml",
+              "name": "Exercise: Create an animated hurrican overlay",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_4/lesson_04_time_ex_02_answer.kml",
+              "name": "Answer: Create an animated hurrican overlay",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            }
+          ]
+        },
+        {
+          "source": "./intermediate/lesson_5",
+          "name": "Lesson 5. KMZ files",
+          "children": [
+            {
+              "source": "./intermediate/lesson_5/lesson_05_kmz_01_hurricane.kml",
+              "name": "Sample: Simple Time Stamp",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_5/lesson_05_kmz_ex_01.kml",
+              "name": "Exercise: Change the Icon href to the KMZ path",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            },
+            {
+              "source": "./intermediate/lesson_5/lesson_05_kmz_ex_02.kml",
+              "name": "Answer: Change the Icon href & HTML img src to the KMZ path",
+              //"descSource": "./Balloons/Balloons.Background_Color.kml.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "section:KML Editing - Advanced",
+      "name": "KML Editing - Advanced",
+      "children": [
+        {
+          "source": "./Ground_Overlays",
+          "name": "Ground Overlays",
+          "children": [
+            {
+              "source": "./Ground_Overlays/Ground_Overlays.Large_Ground_Overlay.kml",
+              "name": "Large Ground Overlay"
+            }
+          ]
+        }
+      ]
+    },
+  ],
+  "identifier": "source",
+  "label": "name"
+}
