@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <open>1</open>
+
+    <!--
+      Put in some of your own HTML. Make sure you keep the "<![CDATA" part before
+      and the "]]>" part after your HTML... otherwise the KML won't work!      
+      If you need some to use, try the following:
+      
+      <html>
+        <body>
+          <img src="http://server/02_unicorn.gif" width="200" />
+          <h3>I love Unicorns!!</h3>
+          <p>Here's the name of my placemark: $[name]</p>
+          <p>Here's the description of my placemark: $[description]</p>
+          <p>RAARRRWWW Unicorns!!</p>
+        </body>
+      </html>
+      
+    -->
+    <Style id="header_style">
+      <BalloonStyle>
+        <text>
+          <![CDATA[
+          
+          Put your HTML here!
+          
+        ]]></text>
+      </BalloonStyle>
+    </Style>
+
+    <Placemark>
+      <name>Header 1</name>
+      <description>How's your day going?</description>
+      <Point>
+        <coordinates>0,0</coordinates>
+      </Point>    
+    </Placemark>
+    
+  </Document>
+</kml>

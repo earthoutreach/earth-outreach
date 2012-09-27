@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>ExtendedData+Data_value</name>
+    
+    <!-- Create a balloon template referring to the user-defined data -->
+    <Style id="trailhead-template">
+      <BalloonStyle>
+        <text><![CDATA[<html><body>
+					<h2>$[TrailHeadName]</h2>
+          <p>The trail's length is $[TrailLength] miles.</p>
+          <p>The trail's elevation gain is $[ElevationGain] meters.</p>
+          </body></html>]]></text>
+      </BalloonStyle>
+    </Style>
+    
+    <!-- Create a Placemark with Extended Data fields -->
+    <Placemark>
+      <name>Difficult trail</name>
+      <styleUrl>#trailhead-template</styleUrl>
+      <ExtendedData>
+				<Data name="TrailHeadName">
+					<value>Mount Everest</value>
+				</Data>
+				<Data name="TrailLength">
+					<value>347.45</value>
+				</Data>
+				<Data name="ElevationGain">
+					<value>10000</value>
+				</Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>-122.000,37.002</coordinates>
+      </Point>
+    </Placemark>
+    
+  </Document>
+</kml>
